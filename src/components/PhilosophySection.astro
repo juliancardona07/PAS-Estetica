@@ -31,32 +31,32 @@ const pillars = [
 ];
 ---
 
-<section id="filosofia" class="py-20 sm:py-28 bg-white border-y border-stone-200/60 scroll-mt-20">
+<section id="filosofia" class="py-20 sm:py-28 bg-gradient-to-b from-purple-100/60 via-stone-50 to-teal-50/50 border-y border-purple-200/70 scroll-mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <p class="text-xs sm:text-sm uppercase tracking-widest text-purple-700 font-semibold">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-900 border border-purple-300 text-xs uppercase tracking-widest font-bold">
         Nuestra Razón de Ser
-      </p>
+      </div>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
         ¿Por qué un enfoque <span class="font-serif italic font-normal text-purple-800">holístico</span> marca la diferencia?
       </h2>
-      <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+      <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
         La estética convencional suele perseguir únicamente el síntoma visible mediante protocolos rápidos y estandarizados. En P.A.S entendemos que el brillo duradero nace del bienestar integral.
       </p>
     </div>
 
     <!-- 4 Pillars Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-      {pillars.map((pillar) => (
-        <div class="relative p-7 rounded-2xl bg-stone-50 border border-purple-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+      {pillars.map((pillar, i) => (
+        <div class="relative p-7 rounded-3xl bg-white border-2 border-purple-200/70 hover:border-teal-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-5">
               <span class="font-serif text-3xl font-bold text-purple-300 group-hover:text-purple-600 transition-colors">
                 {pillar.number}
               </span>
-              <div class="w-12 h-12 rounded-xl bg-purple-100 group-hover:bg-purple-700 text-purple-700 group-hover:text-white flex items-center justify-center transition-colors duration-300">
+              <div class={`w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-sm transition-transform duration-300 group-hover:scale-110 ${i % 2 === 0 ? 'bg-gradient-to-tr from-purple-700 to-purple-500' : 'bg-gradient-to-tr from-teal-600 to-teal-400'}`}>
                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={pillar.icon} />
                 </svg>
@@ -66,7 +66,7 @@ const pillars = [
             <h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-900 transition-colors">
               {pillar.title}
             </h3>
-            <p class="text-xs uppercase tracking-wider text-teal-700 font-semibold mt-1 mb-3">
+            <p class="text-xs uppercase tracking-wider text-teal-700 font-bold mt-1 mb-3">
               {pillar.subtitle}
             </p>
             <p class="text-sm text-slate-600 leading-relaxed">

@@ -12,30 +12,23 @@ const navLinks = [
 const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hola Paula, me gustaría recibir asesoría y agendar una cita en P.A.S Estética Holística.");
 ---
 
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-purple-100/70 shadow-xs transition-colors duration-200">
+<header class="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-purple-200/90 shadow-xs transition-colors duration-200">
+  <!-- Brand Top Bar (Lila & Verde Menta) -->
+  <div class="h-1 bg-gradient-to-r from-purple-700 via-teal-400 to-purple-600"></div>
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between h-20 sm:h-24">
       
-      <!-- Brand Logo -->
-      <a href="/" class="flex items-center gap-3 group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-lg p-1" aria-label="P.A.S Estética Holística - Inicio">
-        <div class="relative w-11 h-11 rounded-full bg-slate-900 flex items-center justify-center shadow-inner overflow-hidden border border-purple-200/40 group-hover:scale-105 transition-transform duration-200">
-          <img 
-            src="/images/logo-sm.webp" 
-            alt="Logo P.A.S" 
-            width="44" 
-            height="44" 
-            class="w-full h-full object-cover scale-125"
-            loading="eager"
-          />
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-slate-900 group-hover:text-purple-700 transition-colors">
-            P.A.S
-          </span>
-          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-purple-700 font-medium -mt-1">
-            Estética Holística
-          </span>
-        </div>
+      <!-- Brand Logo (Large, Sharp & Legible from PAS LOGO.pdf) -->
+      <a href="/" class="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-lg py-1 px-2" aria-label="P.A.S Estética Holística Integral - Inicio">
+        <img 
+          src="/images/logo-horizontal-transparent.webp" 
+          alt="P.A.S Paula Andrea Suárez - Estética Holística Integral" 
+          width="800" 
+          height="482" 
+          class="h-14 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
+          loading="eager"
+        />
       </a>
 
       <!-- Desktop Navigation -->
