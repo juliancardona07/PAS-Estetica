@@ -4,10 +4,10 @@ import BeforeAfterSlider from './BeforeAfterSlider.astro';
 const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("¡Hola Paula! Vengo de la página web de P.A.S y deseo agendar una valoración holística personalizada.");
 ---
 
-<section class="relative overflow-hidden bg-gradient-to-br from-purple-100/90 via-purple-50/40 to-teal-50/70 pt-12 pb-20 sm:pt-16 sm:pb-28">
-  <!-- Decorative background color glows -->
-  <div class="absolute top-0 right-1/4 -z-10 w-[500px] h-[500px] rounded-full bg-purple-300/35 blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-5 left-5 -z-10 w-[450px] h-[450px] rounded-full bg-teal-200/40 blur-3xl pointer-events-none" aria-hidden="true"></div>
+<section class="relative overflow-hidden bg-gradient-to-b from-purple-50/60 via-stone-50 to-stone-50 pt-10 pb-20 sm:pt-16 sm:pb-28">
+  <!-- Subtle decorative background blurs -->
+  <div class="absolute top-0 right-1/4 -z-10 w-96 h-96 rounded-full bg-purple-200/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-10 left-10 -z-10 w-80 h-80 rounded-full bg-teal-100/40 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -16,21 +16,21 @@ const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent(
       <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
         
         <!-- Category Pill Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 border border-purple-300/80 text-purple-900 text-xs sm:text-sm font-semibold tracking-wide shadow-xs">
-          <span class="w-2.5 h-2.5 rounded-full bg-teal-500 ring-4 ring-teal-100"></span>
-          Salud, Belleza Consciente & Bienestar en Bogotá
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/90 border border-purple-200/70 text-purple-900 text-xs sm:text-sm font-medium tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-teal-500"></span>
+          Salud, Belleza & Bienestar Emocional en Bogotá
         </div>
 
         <!-- Main H1 -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15]">
           Tu refugio de pausa. <br class="hidden sm:inline" />
-          <span class="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-purple-700 to-teal-700">Belleza consciente</span> <br class="hidden sm:inline" />
+          <span class="font-serif italic font-normal text-purple-800">Belleza consciente</span> <br class="hidden sm:inline" />
           que sana desde el interior.
         </h1>
 
         <!-- Descriptive Paragraph from BRIEF -->
-        <p class="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-          Más que una cabina estética tradicional, <strong class="text-purple-950 font-semibold">P.A.S</strong> es un santuario diseñado para la desconexión total. Integramos protocolos de alta eficacia dérmica con aromaterapia y armonización energética, entendiendo que la verdadera belleza es el reflejo de tu equilibrio interno.
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Más que una cabina estética tradicional, <strong class="text-slate-900 font-semibold">P.A.S</strong> es un santuario diseñado para la desconexión total. Integramos protocolos de alta eficacia dérmica con aromaterapia y armonización energética, entendiendo que la verdadera belleza es el reflejo de tu equilibrio interno.
         </p>
 
         <!-- CTAs -->
@@ -39,7 +39,7 @@ const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent(
             href={whatsappHeroUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold text-white bg-purple-700 hover:bg-purple-800 active:bg-purple-900 shadow-md hover:shadow-lg transition-all duration-200 focus:outline-hidden focus:ring-4 focus:ring-purple-300 min-h-[48px]"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-purple-700 hover:bg-purple-800 active:bg-purple-900 shadow-md hover:shadow-lg transition-all duration-200 focus:outline-hidden focus:ring-4 focus:ring-purple-300 min-h-[48px]"
           >
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -49,25 +49,25 @@ const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent(
 
           <a
             href="#servicios"
-            class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-4 rounded-full text-base font-semibold text-purple-900 bg-white hover:bg-teal-50/80 border-2 border-purple-200 hover:border-teal-400 transition-colors shadow-xs min-h-[48px]"
+            class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-full text-base font-medium text-purple-900 bg-white hover:bg-purple-50/80 border border-purple-200 transition-colors shadow-xs min-h-[48px]"
           >
             Explorar Tratamientos
           </a>
         </div>
 
         <!-- Trust Badges Bar -->
-        <div class="pt-6 border-t-2 border-purple-200/90 grid grid-cols-3 gap-4 text-left">
-          <div class="p-2 rounded-xl bg-purple-50/80 border border-purple-200/60">
+        <div class="pt-6 border-t border-purple-100/80 grid grid-cols-3 gap-4 text-left">
+          <div>
             <p class="font-serif text-2xl font-bold text-purple-900">360°</p>
-            <p class="text-xs text-purple-900/80 font-medium mt-0.5">Cuerpo, mente y energía</p>
+            <p class="text-xs text-slate-600 mt-0.5">Cuerpo, mente y energía</p>
           </div>
-          <div class="p-2 rounded-xl bg-teal-50/80 border border-teal-200/60">
-            <p class="font-serif text-2xl font-bold text-teal-900">1 a 1</p>
-            <p class="text-xs text-teal-900/80 font-medium mt-0.5">Espacio privado sin prisas</p>
+          <div>
+            <p class="font-serif text-2xl font-bold text-purple-900">1 a 1</p>
+            <p class="text-xs text-slate-600 mt-0.5">Espacio privado sin prisas</p>
           </div>
-          <div class="p-2 rounded-xl bg-purple-50/80 border border-purple-200/60">
+          <div>
             <p class="font-serif text-2xl font-bold text-purple-900">100%</p>
-            <p class="text-xs text-purple-900/80 font-medium mt-0.5">Personalizado a tu piel</p>
+            <p class="text-xs text-slate-600 mt-0.5">Personalizado a tu piel</p>
           </div>
         </div>
 
@@ -97,3 +97,4 @@ const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent(
     </div>
   </div>
 </section>
+

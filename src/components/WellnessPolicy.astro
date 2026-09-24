@@ -23,26 +23,26 @@ const policies = [
 ];
 ---
 
-<section id="politicas" class="py-20 bg-gradient-to-r from-purple-100/70 via-stone-50 to-teal-100/60 border-y border-purple-200/80 scroll-mt-20">
+<section id="politicas" class="py-20 bg-stone-100/70 border-y border-purple-100 scroll-mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="max-w-3xl mx-auto text-center space-y-4">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-900 border border-purple-300 text-xs uppercase tracking-widest font-bold">
+      <span class="text-xs uppercase tracking-widest text-purple-700 font-semibold">
         Convivencia & Armonía
-      </div>
+      </span>
       <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
         Políticas de <span class="font-serif italic font-normal text-purple-800">Bienestar y Calma</span>
       </h2>
-      <p class="text-base text-slate-700 leading-relaxed">
+      <p class="text-base text-slate-600 leading-relaxed">
         Para que tu experiencia y la de los demás pacientes sea genuinamente reparadora, sin apuros ni ruidos, nos regimos por pautas de respeto mutuo y cuidado consciente.
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-      {policies.map((policy, i) => (
-        <div class="p-6 rounded-3xl bg-white border-2 border-purple-200/80 hover:border-teal-400 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+      {policies.map((policy) => (
+        <div class="p-6 rounded-2xl bg-white border border-stone-200/80 shadow-xs flex flex-col justify-between">
           <div>
-            <div class={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 text-white shadow-xs ${i % 2 === 0 ? 'bg-gradient-to-tr from-purple-700 to-purple-500' : 'bg-gradient-to-tr from-teal-600 to-teal-400'}`}>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-4">
               <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={policy.icon} />
               </svg>
@@ -60,3 +60,4 @@ const policies = [
 
   </div>
 </section>
+
