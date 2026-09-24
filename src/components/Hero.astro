@@ -1,4 +1,6 @@
 ---
+import BeforeAfterSlider from './BeforeAfterSlider.astro';
+
 const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("¡Hola Paula! Vengo de la página web de P.A.S y deseo agendar una valoración holística personalizada.");
 ---
 
@@ -71,35 +73,23 @@ const whatsappHeroUrl = "https://wa.me/573118735759?text=" + encodeURIComponent(
 
       </div>
 
-      <!-- Hero Visual Image (5 cols) -->
+      <!-- Hero Interactive Before/After Visual (5 cols) -->
       <div class="lg:col-span-5 relative">
-        <div class="relative mx-auto max-w-md lg:max-w-none">
-          <!-- Ambient frame border -->
-          <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-purple-200/60 to-teal-100/60 blur-xs -z-10"></div>
+        <div class="relative mx-auto max-w-lg lg:max-w-none">
+          <!-- Ambient frame border with purple & mint gradient -->
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-400/30 via-teal-300/30 to-purple-200/40 blur-md -z-10"></div>
           
-          <div class="relative overflow-hidden rounded-2xl shadow-xl border border-white/60 bg-white">
-            <img
-              src="/images/hero-wellness.webp"
-              alt="Ambiente de calma y piedras holísticas en P.A.S Estética Holística Bogotá"
-              width="600"
-              height="400"
-              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-              loading="eager"
-              fetchpriority="high"
-            />
-            
-            <!-- Bottom floating card inside hero visual -->
-            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md shadow-md border border-purple-100 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <p class="text-xs font-bold text-slate-900">Atención Exclusiva en Bogotá</p>
-                <p class="text-[11px] text-slate-600">Carrera 53A #127 · Protocolos con cita previa</p>
-              </div>
+          <BeforeAfterSlider />
+
+          <!-- Location & Exclusivity badge below slider -->
+          <div class="mt-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-purple-200 shadow-md flex items-center justify-between text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="font-bold text-slate-900">Atención Exclusiva en Bogotá</span>
             </div>
+            <span class="text-purple-700 font-semibold text-[11px]">
+              Carrera 53A #127 · Cita previa
+            </span>
           </div>
         </div>
       </div>

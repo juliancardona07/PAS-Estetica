@@ -1,0 +1,181 @@
+---
+interface Props {
+  beforeImage?: string;
+  afterImage?: string;
+  beforeAlt?: string;
+  afterAlt?: string;
+  title?: string;
+}
+
+const {
+  beforeImage = "/images/facial-antes.webp",
+  afterImage = "/images/facial-despues.webp",
+  beforeAlt = "Piel antes del tratamiento: fatiga, deshidratación y tono opaco",
+  afterAlt = "Piel después del tratamiento: luminosidad, oxigenación y glow holístico",
+  title = "Resultados Reales: Protocolo Facial & Glow Holístico"
+} = Astro.props;
+---
+
+<div class="relative w-full select-none" role="region" aria-label="Comparador interactivo de antes y después">
+  
+  <!-- Outer decorative frame with lila & mint gradients -->
+  <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+    
+    <!-- Title & Instruction Banner -->
+    <div class="bg-gradient-to-r from-purple-900 via-purple-800 to-teal-800 px-4 py-2.5 flex items-center justify-between text-white text-xs">
+      <span class="font-bold flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+        {title}
+      </span>
+      <span class="text-[11px] text-purple-200 hidden sm:inline-flex items-center gap-1">
+        👈 Desliza para comparar 👉
+      </span>
+    </div>
+
+    <!-- Comparison Container -->
+    <div id="before-after-container" class="relative w-full aspect-4/3 overflow-hidden cursor-ew-resize touch-none">
+      
+      <!-- 'AFTER' Image (Base Layer - shown on the right) -->
+      <img
+        src={afterImage}
+        alt={afterAlt}
+        width="700"
+        height="500"
+        class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        loading="eager"
+      />
+      <!-- 'Después' Label -->
+      <div class="absolute top-4 right-4 z-10 px-3.5 py-1.5 rounded-full bg-teal-600/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-md pointer-events-none">
+        Después (Glow Holístico)
+      </div>
+
+      <!-- 'BEFORE' Image (Clipped Overlay Layer - shown on the left) -->
+      <div id="before-layer" class="absolute inset-y-0 left-0 overflow-hidden w-1/2 pointer-events-none will-change-[width]">
+        <img
+          src={beforeImage}
+          alt={beforeAlt}
+          width="700"
+          height="500"
+          id="before-img"
+          class="absolute inset-y-0 left-0 w-full h-full object-cover max-w-none"
+          loading="eager"
+        />
+        <!-- 'Antes' Label -->
+        <div class="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-purple-900/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-md pointer-events-none">
+          Antes (Piel con fatiga)
+        </div>
+      </div>
+
+      <!-- Draggable Divider Line & Knob Handle -->
+      <div id="slider-handle" class="absolute inset-y-0 left-1/2 -ml-0.5 w-1 bg-white shadow-2xl pointer-events-none will-change-[left]">
+        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-gradient-to-r from-purple-700 to-teal-600 text-white shadow-xl flex items-center justify-center border-2 border-white ring-4 ring-purple-300/40">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.5 7l-5 5 5 5V7zm7 10l5-5-5-5v10z"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Interactive Touch Bar Guide -->
+    <div class="px-4 py-3 bg-stone-50 border-t border-purple-100 flex items-center justify-between text-xs text-slate-600">
+      <span class="flex items-center gap-1 font-medium text-purple-900">
+        <svg class="w-4 h-4 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+        </svg>
+        <span>Mueve el cursor o desliza con el dedo</span>
+      </span>
+      <span class="text-teal-700 font-bold bg-teal-50 px-2 py-0.5 rounded-md border border-teal-200">
+        Resultados Visibles
+      </span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // High-performance pointer/touch responsive before-after slider
+  function initBeforeAfter() {
+    const container = document.getElementById('before-after-container') as HTMLElement | null;
+    const beforeLayer = document.getElementById('before-layer') as HTMLElement | null;
+    const beforeImg = document.getElementById('before-img') as HTMLElement | null;
+    const handle = document.getElementById('slider-handle') as HTMLElement | null;
+
+    if (!container || !beforeLayer || !beforeImg || !handle) return;
+
+    const c = container;
+    const bl = beforeLayer;
+    const bi = beforeImg;
+    const h = handle;
+
+    let isInteracting = false;
+    let containerRect: DOMRect = c.getBoundingClientRect();
+
+    function updateSize() {
+      containerRect = c.getBoundingClientRect();
+      bi.style.width = `${containerRect.width}px`;
+    }
+
+    window.addEventListener('resize', updateSize);
+    updateSize();
+
+    function setPosition(clientX: number) {
+      if (!containerRect || containerRect.width === 0) {
+        containerRect = c.getBoundingClientRect();
+      }
+      const x = clientX - containerRect.left;
+      let percent = (x / containerRect.width) * 100;
+      if (percent < 0) percent = 0;
+      if (percent > 100) percent = 100;
+
+      requestAnimationFrame(() => {
+        bl.style.width = `${percent}%`;
+        h.style.left = `${percent}%`;
+      });
+    }
+
+    // Desktop hover & drag (works directly as cursor moves over container)
+    c.addEventListener('pointerdown', (e: PointerEvent) => {
+      isInteracting = true;
+      c.setPointerCapture(e.pointerId);
+      setPosition(e.clientX);
+    });
+
+    c.addEventListener('pointermove', (e: PointerEvent) => {
+      // In mobile, responds to drag. In desktop, responds to moving mouse or dragging!
+      if (e.pointerType === 'mouse' || isInteracting) {
+        setPosition(e.clientX);
+      }
+    });
+
+    const endInteraction = (e: PointerEvent) => {
+      isInteracting = false;
+      try {
+        c.releasePointerCapture(e.pointerId);
+      } catch (_) {}
+    };
+
+    c.addEventListener('pointerup', endInteraction);
+    c.addEventListener('pointercancel', endInteraction);
+
+    // Touch events fallback for older mobile webviews
+    c.addEventListener('touchstart', (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        setPosition(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    c.addEventListener('touchmove', (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        setPosition(e.touches[0].clientX);
+      }
+    }, { passive: true });
+  }
+
+  // Run on mount and support Astro page transitions
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBeforeAfter);
+  } else {
+    initBeforeAfter();
+  }
+</script>
