@@ -1,0 +1,62 @@
+---
+const policies = [
+  {
+    title: "Tiempo Exclusivo Blindado",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    description: "No realizamos sobreagendamiento ni atendemos personas en simultáneo. Tu sesión está completamente reservada para ti de inicio a fin."
+  },
+  {
+    title: "Puntualidad Consciente",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    description: "Te recomendamos llegar de 5 a 10 minutos antes. Así podrás descalzarte, dejar atrás el tráfico de Bogotá y saborear una infusión botánica antes de iniciar."
+  },
+  {
+    title: "Desconexión Digital",
+    icon: "M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 4.243a9 9 0 01-12.728 0m0 0l2.829-2.829m-2.829 2.829L3 21m5.464-12.536a5 5 0 017.072 0m0 0l-2.829 2.829",
+    description: "Te invitamos a silenciar tu teléfono móvil durante el protocolo. Este es un oasis para desconectar tu mente y reiniciar tu energía vital."
+  },
+  {
+    title: "Reprogramaciones con Amor",
+    icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+    description: "Si necesitas cambiar tu fecha u horario, te agradecemos avisar con al menos 24 horas de antelación para otorgarle esa oportunidad de calma a otra persona en lista de espera."
+  }
+];
+---
+
+<section id="politicas" class="py-20 bg-stone-100/70 border-y border-purple-100 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="max-w-3xl mx-auto text-center space-y-4">
+      <span class="text-xs uppercase tracking-widest text-purple-700 font-semibold">
+        Convivencia & Armonía
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+        Políticas de <span class="font-serif italic font-normal text-purple-800">Bienestar y Calma</span>
+      </h2>
+      <p class="text-base text-slate-600 leading-relaxed">
+        Para que tu experiencia y la de los demás pacientes sea genuinamente reparadora, sin apuros ni ruidos, nos regimos por pautas de respeto mutuo y cuidado consciente.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+      {policies.map((policy) => (
+        <div class="p-6 rounded-2xl bg-white border border-stone-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={policy.icon} />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">
+              {policy.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {policy.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

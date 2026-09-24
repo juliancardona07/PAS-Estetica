@@ -1,0 +1,116 @@
+[
+  {
+    "id": "limpieza-facial-profunda",
+    "category": "Facial Holístico",
+    "name": "Limpieza Facial Profunda & Oxigenación",
+    "shortDescription": "Higiene facial integral con extracción ultrasónica, alta frecuencia, masaje linfático facial y mascarilla botánica calmante.",
+    "fullDescription": "Protocolo diseñado para limpiar los poros a profundidad, regular la producción sebácea y revitalizar la textura de la piel. Incluye aromaterapia inicial para inducir la calma del sistema nervioso y mascarilla hidroplástica personalizada.",
+    "duration": "75 min",
+    "price": "$120.000 COP",
+    "image": "/images/facial-care.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": true,
+    "benefits": [
+      "Extracción delicada sin agredir la piel",
+      "Oxigenación celular y brillo natural",
+      "Masaje descongestivo con cuarzos fríos",
+      "Sensación de ligereza y frescura inmediata"
+    ]
+  },
+  {
+    "id": "rejuvenecimiento-lifting-holistico",
+    "category": "Facial Holístico",
+    "name": "Lifting Facial Holístico & Radiofrecuencia",
+    "shortDescription": "Estimulación de colágeno mediante radiofrecuencia focalizada, drenaje escultórico facial y activos reafirmantes.",
+    "fullDescription": "Combina tecnología estética avanzada con maniobras manuales de remodelación facial y puntos de digito-puntura. Atenúa líneas de expresión, redefine el óvalo facial y relaja la tensión mandibular.",
+    "duration": "90 min",
+    "price": "$160.000 COP",
+    "image": "/images/facial-care.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": false,
+    "benefits": [
+      "Estimula colágeno y elastina endógena",
+      "Firmeza y tonicidad dérmica visible",
+      "Liberación de tensiones en rostro y cuello",
+      "Efecto tensor luminoso no invasivo"
+    ]
+  },
+  {
+    "id": "moldeo-corporal-drenaje",
+    "category": "Corporal Consciente",
+    "name": "Moldeo Corporal & Drenaje Linfático 360°",
+    "shortDescription": "Técnica combinada de cavitación, maderoterapia suave y drenaje linfático manual para desintoxicar y reducir medidas.",
+    "fullDescription": "Tratamiento enfocado en movilizar líquidos retenidos, mejorar la circulación sanguínea y modelar el contorno corporal sin dolor ni agresividad tisular, respetando el ritmo biológico de tu organismo.",
+    "duration": "80 min",
+    "price": "$140.000 COP",
+    "image": "/images/body-care.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": true,
+    "benefits": [
+      "Disminución de hinchazón y retención de líquidos",
+      "Alivio de pesadez y reactivación circulatoria",
+      "Moldeo de zonas específicas sin hematomas",
+      "Protocolo relajante y no invasivo"
+    ]
+  },
+  {
+    "id": "masaje-relajante-piedras-calientes",
+    "category": "Bienestar & Energía",
+    "name": "Terapia Holística con Piedras Volcánicas",
+    "shortDescription": "Ritual de sanación corporal que fusiona masaje descontracturante, piedras de basalto tibias y aceites esenciales puros.",
+    "fullDescription": "Una inmersión sensorial diseñada para apagar el ruido mental y disolver nudos de tensión muscular. El calor de las piedras volcánicas equilibra los centros energéticos mientras los aceites botánicos nutren la piel.",
+    "duration": "75 min",
+    "price": "$135.000 COP",
+    "image": "/images/hot-stones.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": true,
+    "benefits": [
+      "Alivio profundo del estrés y fatiga física",
+      "Liberación de sobrecarga en espalda y hombros",
+      "Armonización de la energía corporal",
+      "Mejora comprobada en la calidad del sueño"
+    ]
+  },
+  {
+    "id": "ritual-pausa-holistica-integral",
+    "category": "Experiencia Signature",
+    "name": "Ritual P.A.S 'Pausa Holística Integral'",
+    "shortDescription": "Nuestra experiencia insignia de desconexión total: facial oxigenante, masaje corporal relajante y armonización de chacras.",
+    "fullDescription": "Creado para quienes buscan una pausa transformadora en su semana. Iniciamos con exfoliación botánica suave, continuamos con masaje craneofacial y corporal con cuarzos y terminamos con un té herbal aromático.",
+    "duration": "120 min",
+    "price": "$220.000 COP",
+    "image": "/images/holistic-massage.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": true,
+    "benefits": [
+      "Experiencia completa de 2 horas de desconexión",
+      "Cuidado integral de rostro, cuerpo y mente",
+      "Acompañamiento individual sin prisas",
+      "Regalo perfecto para ti o un ser querido"
+    ]
+  },
+  {
+    "id": "exfoliacion-hidratacion-botanica",
+    "category": "Corporal Consciente",
+    "name": "Exfoliación & Manto Hidratante Botánico",
+    "shortDescription": "Renovación celular profunda con sales marinas, arcillas orgánicas y envoltura emoliente en cabina temperada.",
+    "fullDescription": "Devuelve a la piel del cuerpo su sedosidad, elasticidad y tersura natural. Retira células queratinizadas acumuladas y prepara la dermis para una hidratación profunda de larga duración.",
+    "duration": "60 min",
+    "price": "$110.000 COP",
+    "image": "/images/aromatherapy.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": false,
+    "benefits": [
+      "Piel suave y luminosa como seda",
+      "Eliminación de impurezas y asperezas",
+      "Absorción óptima de nutrientes y aceites",
+      "Ambiente cálido de relajación absoluta"
+    ]
+  }
+]

@@ -1,0 +1,85 @@
+---
+const whatsappStoryUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hola Paula, estuve leyendo sobre tu enfoque en la web y me gustaría programar una valoración personalizada.");
+---
+
+<section id="nosotros" class="py-20 sm:py-28 bg-stone-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Founder Photo (5 cols) -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-sm lg:max-w-none">
+          <!-- Backing shadow / border accent -->
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-300/40 via-purple-100 to-teal-100/50 -rotate-2 -z-10"></div>
+          
+          <div class="overflow-hidden rounded-2xl bg-white shadow-xl border border-white">
+            <img
+              src="/images/founder-paula.webp"
+              alt="Paula Andrea Suárez - Especialista en Estética Holística Integral Bogotá"
+              width="600"
+              height="750"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <!-- Bottom floating badge -->
+          <div class="absolute -bottom-6 -right-4 sm:right-6 bg-white p-4 rounded-2xl shadow-lg border border-purple-100 max-w-[240px]">
+            <p class="font-serif text-sm font-bold text-slate-900">Paula Andrea Suárez</p>
+            <p class="text-xs text-purple-700 font-medium">Fundadora & Terapeuta Holística</p>
+            <div class="flex items-center gap-1 mt-1 text-amber-500">
+              <span>★★★★★</span>
+              <span class="text-[10px] text-slate-500 font-semibold ml-1">Atención 1 a 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text / Story Content (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100/80 text-purple-800 text-xs font-semibold uppercase tracking-wider">
+          Quién está detrás de P.A.S
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+          Un espacio donde el cuidado de la piel se vive desde <span class="font-serif italic font-normal text-purple-800">el corazón</span>.
+        </h2>
+
+        <div class="space-y-4 text-base text-slate-600 leading-relaxed">
+          <p>
+            ¡Hola! Soy <strong class="text-slate-900">Paula Andrea Suárez</strong>. Creé <strong>P.A.S Estética Holística</strong> al darme cuenta de que la mayoría de personas que buscaban mejorar su piel venían cargadas de estrés, tensiones musculares y ritmos de vida acelerados.
+          </p>
+          <p>
+            Entendí que colocar una crema o aplicar una máquina sin escuchar a la persona ni calmar su sistema nervioso generaba resultados efímeros. Por ello, diseñé protocolos propios que unen la precisión de la aparatología y la cosmética botánica con la calidez del toque terapéutico, la aromaterapia y el silencio reparador.
+          </p>
+          <p>
+            En mi cabina en Bogotá no encontrarás tratamientos acelerados en serie. Te recibiré personalmente, evaluaremos juntos lo que tu cuerpo y tu piel te están pidiendo, y te regalarás una verdadera pausa de desconexión y sanación.
+          </p>
+        </div>
+
+        <!-- Quote -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-purple-50/70 border-l-4 border-purple-600 text-sm italic text-purple-950">
+          «La belleza no consiste en cambiar tus facciones ni en cumplir expectativas ajenas; consiste en permitir que tu luz, salud y bienestar interno se expresen en tu piel.»
+        </blockquote>
+
+        <!-- Direct CTA -->
+        <div class="pt-2">
+          <a
+            href={whatsappStoryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-purple-700 hover:bg-purple-800 transition-colors shadow-sm focus:outline-hidden focus:ring-2 focus:ring-purple-500 min-h-[44px]"
+          >
+            <span>Conversar con Paula por WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

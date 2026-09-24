@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WellnessPolicy from '../components/WellnessPolicy.astro';
+---
+
+<Layout
+  title="Políticas de Bienestar, Puntualidad y Cancelación | P.A.S Estética Holística"
+  description="Conoce nuestras políticas de puntualidad, reserva exclusiva y cancelación para garantizar una experiencia de paz, respeto y desconexión total."
+>
+  <section class="bg-gradient-to-b from-purple-100/60 to-stone-50 py-16 sm:py-24 border-b border-purple-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <nav class="flex justify-center text-xs text-slate-500 gap-2 mb-2" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-purple-700">Inicio</a>
+        <span>/</span>
+        <span class="text-purple-800 font-semibold">Políticas</span>
+      </nav>
+      <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 leading-tight">
+        Políticas de <span class="font-serif italic font-normal text-purple-800">Bienestar & Convivencia Consciente</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+        Nuestro compromiso es brindarte un refugio de serenidad y privacidad absoluta. Para lograrlo, cuidamos juntos estos principios.
+      </p>
+    </div>
+  </section>
+
+  <WellnessPolicy />
+
+  <!-- Detailed Terms -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+      <div class="p-6 rounded-2xl bg-stone-50 border border-slate-200">
+        <h2 class="font-serif text-xl font-bold text-slate-900 mb-2">1. Reserva de Cita & Anticipación</h2>
+        <p>
+          Dado que atendemos bajo un modelo de cita única individual, solicitamos reservar tu espacio con anticipación a través de nuestro WhatsApp oficial. Te confirmaremos día, hora y recomendaciones previas según el protocolo a realizar.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-stone-50 border border-slate-200">
+        <h2 class="font-serif text-xl font-bold text-slate-900 mb-2">2. Puntualidad & Ritual de Bienvenida</h2>
+        <p>
+          Tu cita inicia en el horario acordado. Llegar 5 a 10 minutos antes te permitirá despojarte del estrés del tráfico, disfrutar una infusión de cortesía y realizar tu ficha de diagnóstico sin restar minutos a tu tratamiento en camilla.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-stone-50 border border-slate-200">
+        <h2 class="font-serif text-xl font-bold text-slate-900 mb-2">3. Cancelaciones o Reprogramaciones</h2>
+        <p>
+          Entendemos que pueden surgir imprevistos. Te solicitamos avisar cualquier modificación con mínimo <strong>24 horas de antelación</strong>. De esta manera, podemos poner el espacio a disposición de otra persona que lo requiera.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-stone-50 border border-slate-200">
+        <h2 class="font-serif text-xl font-bold text-slate-900 mb-2">4. Atmósfera de Silencio y Calma</h2>
+        <p>
+          Para mantener la vibración de paz en cabina, sugerimos mantener el teléfono en silencio durante tu permanencia. Si necesitas atender una llamada de fuerza mayor, te apoyamos para que lo hagas con tranquilidad.
+        </p>
+      </div>
+
+      <div class="pt-4 text-center">
+        <a
+          href="https://wa.me/573118735759?text=Hola%20Paula,%20he%20le%C3%ADdo%20las%20pol%C3%ADticas%20y%20deseo%20agendar%20mi%20cita"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-purple-700 hover:bg-purple-800 transition-colors shadow-sm"
+        >
+          Entendido, Deseo Agendar mi Cita
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

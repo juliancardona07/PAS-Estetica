@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+---
+
+<Layout
+  title="Contacto y Ubicación en Bogotá | P.A.S Estética Holística"
+  description="Encuentra nuestra ubicación en Carrera 53A #127 Bogotá, horarios de atención, teléfonos y canales de contacto para agendar tu cita de valoración."
+>
+  <section class="bg-gradient-to-b from-purple-100/60 to-stone-50 py-16 sm:py-24 border-b border-purple-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <nav class="flex justify-center text-xs text-slate-500 gap-2 mb-2" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-purple-700">Inicio</a>
+        <span>/</span>
+        <span class="text-purple-800 font-semibold">Contacto</span>
+      </nav>
+      <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 leading-tight">
+        Comunícate con <span class="font-serif italic font-normal text-purple-800">P.A.S</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+        Estamos listos para atenderte con calidez y responder a cualquier inquietud sobre tu piel y bienestar.
+      </p>
+    </div>
+  </section>
+
+  <ContactSection />
+  <FAQSection />
+</Layout>

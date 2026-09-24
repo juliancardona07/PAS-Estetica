@@ -1,0 +1,53 @@
+---
+import testimonialsData from '../data/testimonials.json';
+---
+
+<section class="py-20 sm:py-28 bg-stone-50 border-t border-purple-100/70">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <span class="text-xs uppercase tracking-widest text-purple-700 font-semibold">
+        Historias de Bienestar
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+        Lo que sienten quienes nos <span class="font-serif italic font-normal text-purple-800">eligen</span>
+      </h2>
+      <p class="text-base text-slate-600 leading-relaxed">
+        La mayor satisfacción de Paula y del equipo es ver a cada persona salir de cabina con el rostro iluminado, libre de cargas y con una profunda sensación de paz.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+      {testimonialsData.map((item) => (
+        <div class="p-8 rounded-3xl bg-white border border-purple-100/80 shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <!-- Stars -->
+            <div class="flex items-center gap-1 text-amber-400" aria-label={`Calificación ${item.rating} de 5 estrellas`}>
+              {Array.from({ length: item.rating }).map(() => (
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+
+            <p class="text-slate-700 italic leading-relaxed text-sm sm:text-base">
+              «{item.comment}»
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-slate-900 text-sm">{item.name}</p>
+              <p class="text-xs text-slate-500">{item.role}</p>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-purple-50 text-purple-700 font-medium">
+              {item.treatment}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

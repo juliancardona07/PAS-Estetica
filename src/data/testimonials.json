@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Valentina Gómez",
+    "role": "Paciente Facial & Bienestar",
+    "rating": 5,
+    "comment": "Llegué a P.A.S con la piel sumamente reactiva por estrés laboral. Paula no solo me hizo una limpieza impecable y delicada, sino que su atención y la atmósfera del lugar me devolvieron la calma. Es un verdadero refugio.",
+    "treatment": "Limpieza Facial Profunda"
+  },
+  {
+    "id": 2,
+    "name": "Carlos Mauricio Méndez",
+    "role": "Paciente Terapia de Masaje",
+    "rating": 5,
+    "comment": "Trabajo largas jornadas sentado y el dolor lumbar era constante. La terapia con piedras calientes y el enfoque holístico de Paula marcaron un antes y un después. La puntualidad y la privacidad de la cita son inigualables.",
+    "treatment": "Terapia con Piedras Volcánicas"
+  },
+  {
+    "id": 3,
+    "name": "Marcela Rincón",
+    "role": "Paciente Ritual Signature",
+    "rating": 5,
+    "comment": "El Ritual Pausa Holística es la mejor inversión que he hecho en mi bienestar este año. Sales flotando, con la piel renovada y la energía recargada. Cero prisas, atención 100% dedicada a ti.",
+    "treatment": "Ritual Pausa Holística Integral"
+  },
+  {
+    "id": 4,
+    "name": "Laura Sofía Torres",
+    "role": "Paciente Moldeo Corporal",
+    "rating": 5,
+    "comment": "Me encantó que no usan métodos dolorosos ni te dejan moretones. El drenaje y la aparatología son sumamente suaves y los resultados en desinflamación se notan desde la primera semana. 100% recomendado.",
+    "treatment": "Moldeo Corporal & Drenaje"
+  }
+]
