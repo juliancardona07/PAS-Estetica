@@ -19,7 +19,7 @@ import faqsData from '../data/faqs.json';
 
     <!-- Accordion using semantic accessible HTML details/summary (0 KB JS) -->
     <div class="space-y-4">
-      {faqsData.map((faq, index) => (
+      {faqsData.map((faq) => (
         <details class="group bg-stone-50 border border-purple-100 rounded-2xl p-5 sm:p-6 transition-colors duration-200 hover:border-purple-300 open:bg-purple-50/40">
           <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-slate-900 text-base sm:text-lg focus:outline-hidden focus:text-purple-800 select-none">
             <span class="pr-4">{faq.question}</span>
