@@ -14,12 +14,13 @@ interface Props {
 const {
   title = "P.A.S Estética Holística | Paula Andrea Suárez | Bogotá",
   description = "Espacio de salud, estética y belleza consciente en Bogotá. Tratamientos faciales, corporales y terapias holísticas que integran cuerpo, mente y energía.",
-  image = "/images/hero-wellness.webp",
+  image = "/images/hero-video-poster.webp",
   canonicalURL = Astro.url.href,
 } = Astro.props;
 
 const siteUrl = "https://pasestetica.com";
 const fullImageUrl = new URL(image, siteUrl).toString();
+const fullVideoUrl = new URL("/videos/hero-pas-loop.mp4", siteUrl).toString();
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -80,14 +81,24 @@ const schemaData = {
     <meta name="author" content="Paula Andrea Suárez" />
     <meta name="keywords" content="estetica holistica bogota, spa bogota, limpieza facial profunda, drenaje linfatico, masajes relajantes, belleza consciente, paula andrea suarez" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook / WhatsApp / Instagram -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:video" content={fullVideoUrl} />
+    <meta property="og:video:secure_url" content={fullVideoUrl} />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:width" content="1280" />
+    <meta property="og:video:height" content="720" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:site_name" content="P.A.S Estética Holística" />
+
+    <!-- Preload critical Hero poster for instant LCP -->
+    <link rel="preload" as="image" href="/images/hero-video-poster.webp" type="image/webp" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
