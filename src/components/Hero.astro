@@ -5,8 +5,9 @@ import SectionDivider from './SectionDivider.astro';
 
 <!-- =====================================================================
      MOMENTO 1: HERO CINEMÁTICO INTEGRADO
-     El video se funde orgánicamente con el lienzo luminoso de la página,
-     sin recuadros duros ni fondos oscuros.
+     El video respeta siempre su proporción 16:9 completa (object-contain)
+     para que "ESTÉTICA HOLÍSTICA INTEGRAL" nunca se recorte ni quede tapado
+     en ningún tamaño de pantalla.
      ===================================================================== -->
 <section class="relative bg-stone-50 overflow-hidden isolate pt-2 sm:pt-4">
   
@@ -14,15 +15,15 @@ import SectionDivider from './SectionDivider.astro';
   <div class="absolute top-0 left-1/4 w-[28rem] h-[28rem] rounded-full bg-purple-200/35 blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
   <div class="absolute bottom-10 right-1/4 w-[28rem] h-[28rem] rounded-full bg-teal-200/30 blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
 
-  <!-- Seamless Integrated Video Canvas (No Box, Feathered Edges into stone-50) -->
-  <div class="relative w-full max-w-[1600px] mx-auto">
+  <!-- Seamless Integrated Video Canvas (100% Uncropped 16:9 on all screens) -->
+  <div class="relative w-full max-w-5xl xl:max-w-6xl mx-auto px-2 sm:px-6">
     
     <!-- Subtle accessible Play/Pause pill in top-right corner -->
-    <div class="absolute top-2 sm:top-4 right-4 sm:right-8 z-20">
+    <div class="absolute top-2 sm:top-4 right-4 sm:right-10 z-20">
       <button
         type="button"
         id="hero-video-toggle"
-        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/75 hover:bg-white text-slate-700 border border-purple-200/60 text-[11px] font-medium backdrop-blur-md shadow-2xs transition-all cursor-pointer min-h-[34px]"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 hover:bg-white text-slate-700 border border-purple-200/60 text-[11px] font-medium backdrop-blur-md shadow-2xs transition-all cursor-pointer min-h-[34px]"
         aria-label="Pausar animación de video"
         title="Pausar o reproducir video"
       >
@@ -36,11 +37,11 @@ import SectionDivider from './SectionDivider.astro';
       </button>
     </div>
 
-    <!-- Feathered & Tone-Matched Video Layer -->
-    <div class="relative w-full aspect-16/10 sm:aspect-16/9 lg:aspect-21/9 max-h-[72vh] min-h-[260px] sm:min-h-[420px] flex items-center justify-center overflow-hidden">
+    <!-- True 16:9 aspect-video container with object-contain so 100% of the video frame is always visible -->
+    <div class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
       <video
         id="hero-main-video"
-        class="w-full h-full object-contain sm:object-cover object-center brightness-[1.07] contrast-[1.02] saturate-[1.08] [mask-image:radial-gradient(ellipse_88%_82%_at_50%_48%,#000_62%,transparent_100%)] transition-opacity duration-700"
+        class="w-full h-full object-contain object-center brightness-[1.07] contrast-[1.02] saturate-[1.08] [mask-image:radial-gradient(ellipse_96%_94%_at_50%_50%,#000_80%,transparent_100%)] transition-opacity duration-700"
         poster="/images/hero-video-poster.webp"
         width="1280"
         height="720"
@@ -53,17 +54,17 @@ import SectionDivider from './SectionDivider.astro';
         <source data-src="/videos/hero-pas-loop.mp4" type="video/mp4" />
       </video>
 
-      <!-- Seamless edge dissolves into stone-50 so no box/rectangle is ever visible -->
-      <div class="absolute inset-x-0 top-0 h-12 sm:h-20 bg-gradient-to-b from-stone-50 via-stone-50/40 to-transparent pointer-events-none" aria-hidden="true"></div>
-      <div class="absolute inset-x-0 bottom-0 h-20 sm:h-32 bg-gradient-to-t from-stone-50 via-stone-50/70 to-transparent pointer-events-none" aria-hidden="true"></div>
-      <div class="hidden sm:block absolute inset-y-0 left-0 w-24 lg:w-40 bg-gradient-to-r from-stone-50 via-stone-50/50 to-transparent pointer-events-none" aria-hidden="true"></div>
-      <div class="hidden sm:block absolute inset-y-0 right-0 w-24 lg:w-40 bg-gradient-to-l from-stone-50 via-stone-50/50 to-transparent pointer-events-none" aria-hidden="true"></div>
+      <!-- Ultra-thin outer edge dissolves (only 3-5% at the very perimeter) so the text inside the video is never faded -->
+      <div class="absolute inset-x-0 top-0 h-4 sm:h-8 bg-gradient-to-b from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 bottom-0 h-4 sm:h-8 bg-gradient-to-t from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute inset-y-0 left-0 w-4 sm:w-12 bg-gradient-to-r from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute inset-y-0 right-0 w-4 sm:w-12 bg-gradient-to-l from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
     </div>
 
   </div>
 
-  <!-- Centered Headline Card (Buttons Removed per user request) -->
-  <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-12 pb-8 sm:pb-12">
+  <!-- Centered Headline Card (Positioned cleanly below the video without overlapping it) -->
+  <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-1 sm:mt-3 pb-8 sm:pb-12">
     <div class="rounded-3xl bg-white/85 backdrop-blur-xl border border-purple-200/70 shadow-[0_12px_40px_rgba(94,67,121,0.08)] px-6 py-6 sm:px-10 sm:py-8 text-center space-y-2">
       <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-700">
         Salud, Belleza & Bienestar Emocional
