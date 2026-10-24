@@ -14,14 +14,30 @@ const navLinks = [
 const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hola Paula, me gustaría recibir asesoría y agendar una cita en P.A.S Estética Holística.");
 ---
 
-<header class="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-purple-200/90 shadow-xs transition-colors duration-200">
+<header class="sticky top-0 z-40 bg-white border-b border-purple-200/90 shadow-xs transition-colors duration-200">
+  <!-- SVG Color-Key Filter: Neutralizes the warm linen background of the video to pure #FFFFFF while keeping Lila & Mint vibrant -->
+  <svg class="sr-only" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="pas-white-key" color-interpolation-filters="sRGB">
+        <!-- Push warm paper highlights (>= 0.82) to pure 1.0 white and neutralize yellow cast -->
+        <feComponentTransfer result="whiter">
+          <feFuncR type="linear" slope="1.55" intercept="-0.25" />
+          <feFuncG type="linear" slope="1.55" intercept="-0.25" />
+          <feFuncB type="linear" slope="1.64" intercept="-0.25" />
+        </feComponentTransfer>
+        <!-- Restore rich saturation to the lila logo and mint lotus / energy ribbons -->
+        <feColorMatrix in="whiter" type="saturate" values="1.45" />
+      </filter>
+    </defs>
+  </svg>
+
   <!-- Brand Top Bar (Lila & Verde Menta) -->
   <div class="h-1 bg-gradient-to-r from-purple-700 via-teal-400 to-purple-600"></div>
 
   <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20 sm:h-24 gap-2">
       
-      <!-- Brand Logo Dynamic Loop Video (Sized to the Header Logo) -->
+      <!-- Brand Logo Dynamic Loop Video (100% seamlessly blended into the pure white Header) -->
       <a
         href="/#inicio"
         class="relative flex items-center justify-center group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-xl overflow-hidden h-14 sm:h-18 md:h-20 w-36 sm:w-44 md:w-52 shrink-0 bg-white"
@@ -29,7 +45,8 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
       >
         <video
           id="header-logo-video"
-          class="w-full h-full object-cover object-center scale-[1.32] brightness-[1.08] contrast-[1.04] saturate-[1.08] [mask-image:radial-gradient(ellipse_92%_88%_at_50%_50%,#000_72%,transparent_100%)] pointer-events-none select-none transition-transform duration-300 group-hover:scale-[1.36]"
+          style="filter: url(#pas-white-key);"
+          class="w-full h-full object-cover object-center scale-[1.32] mix-blend-multiply pointer-events-none select-none transition-transform duration-300 group-hover:scale-[1.36]"
           poster="/images/hero-video-poster.webp"
           width="320"
           height="180"
@@ -92,7 +109,7 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
   </div>
 
   <!-- Mobile/Tablet Drawer Menu -->
-  <div id="mobile-menu" class="hidden xl:hidden bg-white/98 border-b border-purple-100 px-4 pt-3 pb-6 shadow-xl transition-all duration-300">
+  <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-purple-100 px-4 pt-3 pb-6 shadow-xl transition-all duration-300">
     <nav class="grid grid-cols-1 sm:grid-cols-2 gap-1" aria-label="Menú móvil">
       {navLinks.map((link) => (
         <a
