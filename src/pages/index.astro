@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionDivider from '../components/SectionDivider.astro';
-import PhilosophySection from '../components/PhilosophySection.astro';
 import ServicesSection from '../components/ServicesSection.astro';
+import PhilosophySection from '../components/PhilosophySection.astro';
 import AboutSection from '../components/AboutSection.astro';
-import WellnessPolicy from '../components/WellnessPolicy.astro';
 import GallerySection from '../components/GallerySection.astro';
 import Testimonials from '../components/Testimonials.astro';
+import WellnessPolicy from '../components/WellnessPolicy.astro';
 import FAQSection from '../components/FAQSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 ---
@@ -16,21 +16,34 @@ import ContactSection from '../components/ContactSection.astro';
   title="P.A.S Estética Holística | Paula Andrea Suárez · Bogotá"
   description="Espacio de salud, estética y belleza consciente en Bogotá. Tratamientos faciales, corporales y masajes holísticos que integran cuerpo, mente y energía en un refugio de calma."
 >
+  <!-- 1. Inicio (/#) -->
   <Hero />
   <SectionDivider />
-  <PhilosophySection />
-  <SectionDivider />
+
+  <!-- 2. Servicios (/#servicios) -->
   <ServicesSection />
+  <SectionDivider />
+
+  <!-- 3. Filosofía 360° (/#filosofia: Ciencia Dérmica, Antes/Después, 4 Pilares y Fundadora) -->
+  <PhilosophySection />
   <SectionDivider />
   <AboutSection />
   <SectionDivider />
-  <WellnessPolicy />
-  <SectionDivider />
+
+  <!-- 4. Experiencia (/#experiencia: Galería del Espacio y Testimonios) -->
   <GallerySection />
   <SectionDivider />
   <Testimonials />
   <SectionDivider />
+
+  <!-- 5. Políticas (/#politicas) -->
+  <WellnessPolicy />
+  <SectionDivider />
+
+  <!-- 6. Preguntas (/#preguntas) -->
   <FAQSection />
   <SectionDivider />
+
+  <!-- 7. Contacto (/#contacto) -->
   <ContactSection />
 </Layout>

@@ -1,15 +1,13 @@
 ---
-import BeforeAfterSlider from './BeforeAfterSlider.astro';
-import SectionDivider from './SectionDivider.astro';
 ---
 
 <!-- =====================================================================
-     MOMENTO 1: HERO CINEMÁTICO INTEGRADO
+     SECCIÓN 1 (INICIO): HERO CINEMÁTICO INTEGRADO
      El video respeta siempre su proporción 16:9 completa (object-contain)
      para que "ESTÉTICA HOLÍSTICA INTEGRAL" nunca se recorte ni quede tapado
      en ningún tamaño de pantalla.
      ===================================================================== -->
-<section class="relative bg-stone-50 overflow-hidden isolate pt-2 sm:pt-4">
+<section id="inicio" class="relative bg-stone-50 overflow-hidden isolate pt-2 sm:pt-4 scroll-mt-24">
   
   <!-- Soft ambient aura behind the integrated video -->
   <div class="absolute top-0 left-1/4 w-[28rem] h-[28rem] rounded-full bg-purple-200/35 blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
@@ -72,99 +70,6 @@ import SectionDivider from './SectionDivider.astro';
       <h1 class="text-2xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-slate-900 leading-tight">
         Tu refugio de pausa. <span class="font-serif italic font-normal text-purple-800">Belleza consciente</span> que sana desde el interior.
       </h1>
-    </div>
-  </div>
-</section>
-
-<!-- Divider with P.A.S Lotus Flower -->
-<SectionDivider />
-
-<!-- =====================================================================
-     MOMENTO 2: SECCIÓN EDITORIAL — EL SANTUARIO & RESULTADOS REALES
-     ===================================================================== -->
-<section id="esencia-y-resultados" class="relative py-16 sm:py-24 bg-gradient-to-b from-stone-50 via-purple-50/35 to-stone-50 overflow-hidden scroll-mt-20">
-  
-  <!-- Decorative soft blurs -->
-  <div class="absolute top-12 right-10 -z-10 w-80 h-80 rounded-full bg-purple-200/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-10 left-10 -z-10 w-80 h-80 rounded-full bg-teal-100/40 blur-3xl pointer-events-none" aria-hidden="true"></div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-      
-      <!-- Narrative & Bento Pillars (6 cols) -->
-      <div class="lg:col-span-6 space-y-6 sm:space-y-8">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-900 text-xs uppercase tracking-widest font-bold">
-          Ciencia Dérmica & Armonía Interior
-        </div>
-
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15]">
-          Un santuario diseñado para la <span class="font-serif italic font-normal text-purple-800">desconexión total</span> y resultados visibles.
-        </h2>
-
-        <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-          Más que una cabina estética tradicional, <strong class="text-slate-900 font-semibold">P.A.S</strong> integra protocolos clínicos no invasivos de alta eficacia con aromaterapia y armonización energética. Aquí no vienes con prisa: cada sesión renueva tu piel mientras libera el estrés acumulado en tu cuerpo.
-        </p>
-
-        <!-- Bento Trust Cards (3 Pillars) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
-          <div class="p-4 rounded-2xl bg-white border border-purple-200/80 shadow-xs hover:shadow-md hover:border-purple-300 transition-all">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple-100 text-purple-800 font-serif font-bold text-lg mb-2">
-              360°
-            </span>
-            <h3 class="text-sm font-bold text-slate-900">Enfoque Integral</h3>
-            <p class="text-xs text-slate-600 mt-0.5">Cuerpo, mente y energía en sintonía</p>
-          </div>
-
-          <div class="p-4 rounded-2xl bg-white border border-teal-200/80 shadow-xs hover:shadow-md hover:border-teal-300 transition-all">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-teal-50 text-teal-800 font-serif font-bold text-lg mb-2">
-              1:1
-            </span>
-            <h3 class="text-sm font-bold text-slate-900">Sin Prisas</h3>
-            <p class="text-xs text-slate-600 mt-0.5">Cabina privada exclusiva para ti</p>
-          </div>
-
-          <div class="p-4 rounded-2xl bg-white border border-purple-200/80 shadow-xs hover:shadow-md hover:border-purple-300 transition-all">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple-100 text-purple-800 font-serif font-bold text-lg mb-2">
-              100%
-            </span>
-            <h3 class="text-sm font-bold text-slate-900">A tu Medida</h3>
-            <p class="text-xs text-slate-600 mt-0.5">Diagnóstico previo personalizado</p>
-          </div>
-        </div>
-
-        <!-- Secondary link to catalog -->
-        <div class="pt-2 flex flex-wrap items-center gap-4">
-          <a
-            href="#servicios"
-            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-purple-900 bg-white hover:bg-purple-50 border-2 border-purple-200 shadow-xs transition-all min-h-[48px]"
-          >
-            <span>Explorar Catálogo de Tratamientos</span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Interactive Before/After Showcase (6 cols) -->
-      <div class="lg:col-span-6 relative">
-        <div class="relative mx-auto max-w-lg lg:max-w-none">
-          <!-- Ambient frame border with purple & mint gradient -->
-          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-400/30 via-teal-300/30 to-purple-200/40 blur-md -z-10" aria-hidden="true"></div>
-          
-          <BeforeAfterSlider />
-
-          <!-- Location & Exclusivity badge below slider -->
-          <div class="mt-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-purple-200 shadow-md flex items-center justify-between text-xs text-slate-700">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="font-bold text-slate-900">Atención Exclusiva en Bogotá</span>
-            </div>
-            <span class="text-purple-800 font-semibold text-[11px]">
-              Carrera 53A #127 · Cita previa
-            </span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
