@@ -1,153 +1,97 @@
 ---
+import BeforeAfterSlider from './BeforeAfterSlider.astro';
 ---
 
-<!-- =====================================================================
-     SECCIÓN 1 (INICIO): HERO CINEMÁTICO INTEGRADO
-     El video respeta siempre su proporción 16:9 completa (object-contain)
-     para que "ESTÉTICA HOLÍSTICA INTEGRAL" nunca se recorte ni quede tapado
-     en ningún tamaño de pantalla.
-     ===================================================================== -->
-<section id="inicio" class="relative bg-stone-50 overflow-hidden isolate pt-2 sm:pt-4 scroll-mt-24">
-  
-  <!-- Soft ambient aura behind the integrated video -->
-  <div class="absolute top-0 left-1/4 w-[28rem] h-[28rem] rounded-full bg-purple-200/35 blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
-  <div class="absolute bottom-10 right-1/4 w-[28rem] h-[28rem] rounded-full bg-teal-200/30 blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+<section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-purple-50/55 via-stone-50 to-stone-50 pt-10 pb-16 sm:pt-14 sm:pb-24 scroll-mt-24">
+  <!-- Subtle decorative background blurs -->
+  <div class="absolute top-0 right-1/4 -z-10 w-96 h-96 rounded-full bg-purple-200/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-10 left-10 -z-10 w-80 h-80 rounded-full bg-teal-100/40 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
-  <!-- Seamless Integrated Video Canvas (100% Uncropped 16:9 on all screens) -->
-  <div class="relative w-full max-w-5xl xl:max-w-6xl mx-auto px-2 sm:px-6">
-    
-    <!-- Subtle accessible Play/Pause pill in top-right corner -->
-    <div class="absolute top-2 sm:top-4 right-4 sm:right-10 z-20">
-      <button
-        type="button"
-        id="hero-video-toggle"
-        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 hover:bg-white text-slate-700 border border-purple-200/60 text-[11px] font-medium backdrop-blur-md shadow-2xs transition-all cursor-pointer min-h-[34px]"
-        aria-label="Pausar animación de video"
-        title="Pausar o reproducir video"
-      >
-        <svg id="icon-video-pause" class="w-3 h-3 fill-current text-purple-700" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-        </svg>
-        <svg id="icon-video-play" class="w-3 h-3 fill-current text-purple-700 hidden" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M8 5v14l11-7z" />
-        </svg>
-        <span id="label-video-toggle">Pausar</span>
-      </button>
-    </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+      
+      <!-- Text & Bento Pillars Content (6 cols) -->
+      <div class="lg:col-span-6 space-y-6 sm:space-y-7 text-center lg:text-left">
+        
+        <!-- Category Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/90 border border-purple-200/70 text-purple-900 text-xs sm:text-sm font-medium tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+          Salud, Belleza & Bienestar Emocional en Bogotá
+        </div>
 
-    <!-- True 16:9 aspect-video container with object-contain so 100% of the video frame is always visible -->
-    <div class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
-      <video
-        id="hero-main-video"
-        class="w-full h-full object-contain object-center brightness-[1.07] contrast-[1.02] saturate-[1.08] [mask-image:radial-gradient(ellipse_96%_94%_at_50%_50%,#000_80%,transparent_100%)] transition-opacity duration-700"
-        poster="/images/hero-video-poster.webp"
-        width="1280"
-        height="720"
-        muted
-        loop
-        playsinline
-        webkit-playsinline
-        preload="metadata"
-      >
-        <source data-src="/videos/hero-pas-loop.mp4" type="video/mp4" />
-      </video>
+        <!-- Main H1 -->
+        <h1 class="text-3xl sm:text-5xl lg:text-[3.35rem] font-bold tracking-tight text-slate-900 leading-[1.14]">
+          Tu refugio de pausa. <br class="hidden sm:inline" />
+          <span class="font-serif italic font-normal text-purple-800">Belleza consciente</span> <br class="hidden sm:inline" />
+          que sana desde el interior.
+        </h1>
 
-      <!-- Ultra-thin outer edge dissolves (only 3-5% at the very perimeter) so the text inside the video is never faded -->
-      <div class="absolute inset-x-0 top-0 h-4 sm:h-8 bg-gradient-to-b from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
-      <div class="absolute inset-x-0 bottom-0 h-4 sm:h-8 bg-gradient-to-t from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
-      <div class="absolute inset-y-0 left-0 w-4 sm:w-12 bg-gradient-to-r from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
-      <div class="absolute inset-y-0 right-0 w-4 sm:w-12 bg-gradient-to-l from-stone-50 to-transparent pointer-events-none" aria-hidden="true"></div>
-    </div>
+        <!-- Descriptive Paragraph from BRIEF -->
+        <p class="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Más que una cabina estética tradicional, <strong class="text-slate-900 font-semibold">P.A.S</strong> es un santuario diseñado para la desconexión total. Integramos protocolos clínicos no invasivos de alta eficacia dérmica con aromaterapia y armonización energética, entendiendo que la verdadera belleza es el reflejo de tu equilibrio interno.
+        </p>
 
-  </div>
+        <!-- Bento Trust Cards (3 Pillars) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 text-left">
+          <div class="p-4 rounded-2xl bg-white border border-purple-200/80 shadow-xs hover:shadow-md hover:border-purple-300 transition-all">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple-100 text-purple-800 font-serif font-bold text-lg mb-2">
+              360°
+            </span>
+            <h2 class="text-sm font-bold text-slate-900">Enfoque Integral</h2>
+            <p class="text-xs text-slate-600 mt-0.5">Cuerpo, mente y energía en sintonía</p>
+          </div>
 
-  <!-- Centered Headline Card (Positioned cleanly below the video without overlapping it) -->
-  <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-1 sm:mt-3 pb-8 sm:pb-12">
-    <div class="rounded-3xl bg-white/85 backdrop-blur-xl border border-purple-200/70 shadow-[0_12px_40px_rgba(94,67,121,0.08)] px-6 py-6 sm:px-10 sm:py-8 text-center space-y-2">
-      <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-700">
-        Salud, Belleza & Bienestar Emocional
-      </p>
-      <h1 class="text-2xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-slate-900 leading-tight">
-        Tu refugio de pausa. <span class="font-serif italic font-normal text-purple-800">Belleza consciente</span> que sana desde el interior.
-      </h1>
+          <div class="p-4 rounded-2xl bg-white border border-teal-200/80 shadow-xs hover:shadow-md hover:border-teal-300 transition-all">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-teal-50 text-teal-800 font-serif font-bold text-lg mb-2">
+              1:1
+            </span>
+            <h2 class="text-sm font-bold text-slate-900">Sin Prisas</h2>
+            <p class="text-xs text-slate-600 mt-0.5">Cabina privada exclusiva para ti</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-purple-200/80 shadow-xs hover:shadow-md hover:border-purple-300 transition-all">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple-100 text-purple-800 font-serif font-bold text-lg mb-2">
+              100%
+            </span>
+            <h2 class="text-sm font-bold text-slate-900">A tu Medida</h2>
+            <p class="text-xs text-slate-600 mt-0.5">Diagnóstico previo personalizado</p>
+          </div>
+        </div>
+
+        <!-- Secondary link to catalog -->
+        <div class="pt-1 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+          <a
+            href="#servicios"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-purple-900 bg-white hover:bg-purple-50 border-2 border-purple-200 shadow-xs transition-all min-h-[48px]"
+          >
+            <span>Explorar Catálogo de Tratamientos</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hero Interactive Before/After Visual (6 cols) -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative mx-auto max-w-lg lg:max-w-none">
+          <!-- Ambient frame border with purple & mint gradient -->
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-400/30 via-teal-300/30 to-purple-200/40 blur-md -z-10" aria-hidden="true"></div>
+          
+          <BeforeAfterSlider />
+
+          <!-- Location & Exclusivity badge below slider -->
+          <div class="mt-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-purple-200 shadow-md flex items-center justify-between text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="font-bold text-slate-900">Atención Exclusiva en Bogotá</span>
+            </div>
+            <span class="text-purple-800 font-semibold text-[11px]">
+              Carrera 53A #127 · Cita previa
+            </span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-
-<script>
-  function initHeroVideo() {
-    const mainVideo = document.getElementById('hero-main-video') as HTMLVideoElement | null;
-    const toggleBtn = document.getElementById('hero-video-toggle') as HTMLButtonElement | null;
-    const iconPause = document.getElementById('icon-video-pause');
-    const iconPlay = document.getElementById('icon-video-play');
-    const labelToggle = document.getElementById('label-video-toggle');
-
-    if (!mainVideo) return;
-
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const connection = (navigator as unknown as { connection?: { saveData?: boolean } }).connection;
-    const saveData = Boolean(connection?.saveData);
-
-    function setToggleUI(isPaused: boolean) {
-      if (!toggleBtn || !iconPause || !iconPlay || !labelToggle) return;
-      if (isPaused) {
-        iconPause.classList.add('hidden');
-        iconPlay.classList.remove('hidden');
-        labelToggle.textContent = 'Reproducir';
-        toggleBtn.setAttribute('aria-label', 'Reproducir animación de video');
-      } else {
-        iconPause.classList.remove('hidden');
-        iconPlay.classList.add('hidden');
-        labelToggle.textContent = 'Pausar';
-        toggleBtn.setAttribute('aria-label', 'Pausar animación de video');
-      }
-    }
-
-    function hydrateAndPlay() {
-      if (!mainVideo) return;
-      mainVideo.muted = true;
-      mainVideo.defaultMuted = true;
-      mainVideo.playsInline = true;
-
-      const source = mainVideo.querySelector('source');
-      if (source && source.dataset.src && !source.getAttribute('src')) {
-        source.setAttribute('src', source.dataset.src);
-        mainVideo.load();
-      }
-
-      const playPromise = mainVideo.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => setToggleUI(false))
-          .catch(() => setToggleUI(true));
-      }
-    }
-
-    if (!prefersReducedMotion && !saveData) {
-      if ('requestIdleCallback' in window) {
-        (window as Window & { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => void })
-          .requestIdleCallback(hydrateAndPlay, { timeout: 600 });
-      } else {
-        setTimeout(hydrateAndPlay, 100);
-      }
-    } else {
-      setToggleUI(true);
-    }
-
-    toggleBtn?.addEventListener('click', () => {
-      if (!mainVideo.paused) {
-        mainVideo.pause();
-        setToggleUI(true);
-      } else {
-        hydrateAndPlay();
-        setToggleUI(false);
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeroVideo);
-  } else {
-    initHeroVideo();
-  }
-</script>

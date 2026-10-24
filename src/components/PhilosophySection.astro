@@ -1,7 +1,4 @@
 ---
-import BeforeAfterSlider from './BeforeAfterSlider.astro';
-import SectionDivider from './SectionDivider.astro';
-
 const pillars = [
   {
     number: "01",
@@ -34,101 +31,10 @@ const pillars = [
 ];
 ---
 
-<!-- =====================================================================
-     SECCIÓN 3 (FILOSOFÍA 360°): CIENCIA DÉRMICA, ARMONÍA INTERIOR & RESULTADOS
-     Asociada directamente al botón "Filosofía 360°" (#filosofia) del Header.
-     ===================================================================== -->
-<section id="filosofia" class="relative py-20 sm:py-28 bg-gradient-to-b from-stone-50 via-purple-50/40 to-stone-50 overflow-hidden scroll-mt-20">
-  
-  <!-- Decorative soft blurs -->
-  <div class="absolute top-12 right-10 -z-10 w-80 h-80 rounded-full bg-purple-200/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-10 left-10 -z-10 w-80 h-80 rounded-full bg-teal-100/40 blur-3xl pointer-events-none" aria-hidden="true"></div>
-
+<section id="filosofia" class="py-20 sm:py-28 bg-gradient-to-b from-stone-50 via-purple-100/50 to-stone-50 scroll-mt-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- PARTE 1: Ciencia Dérmica & Armonía Interior + Antes y Después -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center pb-16 sm:pb-24">
-      
-      <!-- Narrative & Bento Pillars (6 cols) -->
-      <div class="lg:col-span-6 space-y-6 sm:space-y-8">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-900 text-xs uppercase tracking-widest font-bold">
-          Filosofía 360° · Ciencia Dérmica & Armonía Interior
-        </div>
-
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15]">
-          Un santuario diseñado para la <span class="font-serif italic font-normal text-purple-800">desconexión total</span> y resultados visibles.
-        </h2>
-
-        <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
-          Más que una cabina estética tradicional, <strong class="text-slate-900 font-semibold">P.A.S</strong> integra protocolos clínicos no invasivos de alta eficacia con aromaterapia y armonización energética. Aquí no vienes con prisa: cada sesión renueva tu piel mientras libera el estrés acumulado en tu cuerpo.
-        </p>
-
-        <!-- Bento Trust Cards (3 Pillars) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
-          <div class="p-4 rounded-2xl bg-white border border-purple-200/80 shadow-xs hover:shadow-md hover:border-purple-300 transition-all">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple-100 text-purple-800 font-serif font-bold text-lg mb-2">
-              360°
-            </span>
-            <h3 class="text-sm font-bold text-slate-900">Enfoque Integral</h3>
-            <p class="text-xs text-slate-600 mt-0.5">Cuerpo, mente y energía en sintonía</p>
-          </div>
-
-          <div class="p-4 rounded-2xl bg-white border border-teal-200/80 shadow-xs hover:shadow-md hover:border-teal-300 transition-all">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-teal-50 text-teal-800 font-serif font-bold text-lg mb-2">
-              1:1
-            </span>
-            <h3 class="text-sm font-bold text-slate-900">Sin Prisas</h3>
-            <p class="text-xs text-slate-600 mt-0.5">Cabina privada exclusiva para ti</p>
-          </div>
-
-          <div class="p-4 rounded-2xl bg-white border border-purple-200/80 shadow-xs hover:shadow-md hover:border-purple-300 transition-all">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple-100 text-purple-800 font-serif font-bold text-lg mb-2">
-              100%
-            </span>
-            <h3 class="text-sm font-bold text-slate-900">A tu Medida</h3>
-            <p class="text-xs text-slate-600 mt-0.5">Diagnóstico previo personalizado</p>
-          </div>
-        </div>
-
-        <!-- Secondary link to catalog -->
-        <div class="pt-2 flex flex-wrap items-center gap-4">
-          <a
-            href="#servicios"
-            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-purple-900 bg-white hover:bg-purple-50 border-2 border-purple-200 shadow-xs transition-all min-h-[48px]"
-          >
-            <span>Ver Carta de Tratamientos</span>
-            <span aria-hidden="true">↑</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Interactive Before/After Showcase (6 cols) -->
-      <div class="lg:col-span-6 relative">
-        <div class="relative mx-auto max-w-lg lg:max-w-none">
-          <!-- Ambient frame border with purple & mint gradient -->
-          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-400/30 via-teal-300/30 to-purple-200/40 blur-md -z-10" aria-hidden="true"></div>
-          
-          <BeforeAfterSlider />
-
-          <!-- Location & Exclusivity badge below slider -->
-          <div class="mt-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-purple-200 shadow-md flex items-center justify-between text-xs text-slate-700">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="font-bold text-slate-900">Atención Exclusiva en Bogotá</span>
-            </div>
-            <span class="text-purple-800 font-semibold text-[11px]">
-              Carrera 53A #127 · Cita previa
-            </span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Internal Lotus Divider between Parte 1 and Parte 2 of Filosofía 360° -->
-    <SectionDivider className="mb-16 sm:mb-20" />
-
-    <!-- PARTE 2: Los 4 Pilares del Enfoque Holístico 360° -->
+    <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto space-y-4">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-900 border border-purple-300 text-xs uppercase tracking-widest font-bold">
         Nuestra Razón de Ser

@@ -1,9 +1,11 @@
 ---
 const navLinks = [
-  { label: "Inicio", href: "/#" },
+  { label: "Inicio", href: "/#inicio" },
   { label: "Servicios", href: "/#servicios" },
   { label: "Filosofía 360°", href: "/#filosofia" },
+  { label: "Nosotros", href: "/#nosotros" },
   { label: "Experiencia", href: "/#experiencia" },
+  { label: "Testimonios", href: "/#testimonios" },
   { label: "Políticas", href: "/#politicas" },
   { label: "Preguntas", href: "/#preguntas" },
   { label: "Contacto", href: "/#contacto" },
@@ -16,34 +18,45 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
   <!-- Brand Top Bar (Lila & Verde Menta) -->
   <div class="h-1 bg-gradient-to-r from-purple-700 via-teal-400 to-purple-600"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20 sm:h-24 gap-2">
       
-      <!-- Brand Logo (Large, Sharp & Legible from PAS LOGO.pdf) -->
-      <a href="/" class="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-lg py-1 px-1 sm:px-2 shrink-0" aria-label="P.A.S Estética Holística Integral - Inicio">
-        <img 
-          src="/images/logo-horizontal-transparent.webp" 
-          alt="P.A.S Paula Andrea Suárez - Estética Holística Integral" 
-          width="800" 
-          height="482" 
-          class="h-12 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
-          loading="eager"
-        />
+      <!-- Brand Logo Dynamic Loop Video (Sized to the Header Logo) -->
+      <a
+        href="/#inicio"
+        class="relative flex items-center justify-center group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-xl overflow-hidden h-14 sm:h-18 md:h-20 w-36 sm:w-44 md:w-52 shrink-0 bg-white"
+        aria-label="P.A.S Estética Holística Integral - Inicio"
+      >
+        <video
+          id="header-logo-video"
+          class="w-full h-full object-cover object-center scale-[1.32] brightness-[1.08] contrast-[1.04] saturate-[1.08] [mask-image:radial-gradient(ellipse_92%_88%_at_50%_50%,#000_72%,transparent_100%)] pointer-events-none select-none transition-transform duration-300 group-hover:scale-[1.36]"
+          poster="/images/hero-video-poster.webp"
+          width="320"
+          height="180"
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          preload="metadata"
+        >
+          <source src="/videos/hero-pas-loop.mp4" type="video/mp4" />
+        </video>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-7" aria-label="Navegación principal">
+      <!-- Desktop Navigation (Exact 1-to-1 match with all 9 page sections) -->
+      <nav class="hidden xl:flex items-center space-x-5" aria-label="Navegación principal">
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-sm font-medium text-slate-700 hover:text-purple-700 transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 hover:after:w-full after:transition-all after:duration-200"
+            class="text-[13px] font-semibold text-slate-700 hover:text-purple-700 transition-colors py-2 whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 hover:after:w-full after:transition-all after:duration-200"
           >
             {link.label}
           </a>
         ))}
       </nav>
 
-      <!-- Header CTA (Always Visible across Mobile, Tablet & Desktop) + Mobile Menu Button -->
+      <!-- Header CTA (Always Visible across Mobile, Tablet & Desktop) + Mobile/Tablet Menu Button -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <a
           href={whatsappUrl}
@@ -57,11 +70,11 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
           <span>Agendar Cita</span>
         </a>
 
-        <!-- Mobile Menu Button -->
+        <!-- Mobile/Tablet Menu Button -->
         <button
           type="button"
           id="menu-toggle"
-          class="inline-flex lg:hidden items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-purple-700 hover:bg-purple-50 focus:outline-hidden focus:ring-2 focus:ring-purple-600 min-w-[44px] min-h-[44px]"
+          class="inline-flex xl:hidden items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-purple-700 hover:bg-purple-50 focus:outline-hidden focus:ring-2 focus:ring-purple-600 min-w-[44px] min-h-[44px]"
           aria-controls="mobile-menu"
           aria-expanded="false"
           aria-label="Abrir menú de navegación"
@@ -78,13 +91,13 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
     </div>
   </div>
 
-  <!-- Mobile Drawer Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white/98 border-b border-purple-100 px-4 pt-3 pb-6 shadow-xl transition-all duration-300">
-    <nav class="flex flex-col space-y-1">
+  <!-- Mobile/Tablet Drawer Menu -->
+  <div id="mobile-menu" class="hidden xl:hidden bg-white/98 border-b border-purple-100 px-4 pt-3 pb-6 shadow-xl transition-all duration-300">
+    <nav class="grid grid-cols-1 sm:grid-cols-2 gap-1" aria-label="Menú móvil">
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="mobile-nav-link text-base font-medium text-slate-700 hover:text-purple-700 hover:bg-purple-50 px-3 py-3 rounded-lg transition-colors min-h-[44px] flex items-center"
+          class="mobile-nav-link text-base font-medium text-slate-700 hover:text-purple-700 hover:bg-purple-50 px-3 py-2.5 rounded-lg transition-colors min-h-[44px] flex items-center"
         >
           {link.label}
         </a>
@@ -94,12 +107,25 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
 </header>
 
 <script>
-  // Pure lightweight client script for mobile menu toggle
+  // Pure lightweight client script for mobile menu toggle & header logo video autoplay
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('icon-open');
   const iconClose = document.getElementById('icon-close');
   const navLinks = document.querySelectorAll('.mobile-nav-link');
+  const headerVideo = document.getElementById('header-logo-video') as HTMLVideoElement | null;
+
+  if (headerVideo) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+      headerVideo.muted = true;
+      headerVideo.defaultMuted = true;
+      headerVideo.playsInline = true;
+      headerVideo.play().catch(() => {});
+    } else {
+      headerVideo.pause();
+    }
+  }
 
   if (menuToggle && mobileMenu && iconOpen && iconClose) {
     menuToggle.addEventListener('click', () => {
@@ -110,7 +136,6 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
       iconClose.classList.toggle('hidden');
     });
 
-    // Close menu when a link is clicked
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
