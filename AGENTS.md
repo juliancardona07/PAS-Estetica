@@ -64,6 +64,10 @@ resolverse de manera sencilla con Astro, HTML, CSS y JavaScript.
 Si los requerimientos superan las capacidades o conveniencia de esta
 arquitectura, explicar la necesidad antes de cambiar el stack.
 
+Priorizar características estándar de la plataforma web bajo el criterio
+**Baseline** (*Baseline Widely Available* por defecto; *Baseline Newly
+Available* únicamente con mejora progresiva y sin introducir polyfills pesados).
+
 # 3. Arquitectura
 
 La aplicación debe utilizar una arquitectura simple y componentizada.
@@ -321,12 +325,16 @@ Priorizar:
 -   Mantener páginas ligeras (peso total de la página inferior a 1 MB en
     producción).
 
+-   Evaluar `content-visibility: auto` (con `contain-intrinsic-size`) en
+    secciones extensas fuera del viewport inicial cuando mejore el tiempo de
+    renderizado sin afectar el desplazamiento por anclas.
+
 No agregar animaciones, librerías o funcionalidades que tengan un costo
 significativo de rendimiento sin justificar su necesidad.
 
 El objetivo es obtener puntuaciones superiores a 95-100 en herramientas como
 Lighthouse y mantener métricas óptimas de Core Web Vitals (LCP \< 2.5s, CLS = 0,
-TBT \< 200ms).
+INP \<= 200ms, TBT \< 200ms).
 
 # 9. Imágenes y multimedia
 
@@ -352,6 +360,11 @@ Considerar:
 
 -   `loading="lazy"` y `decoding="async"` para imágenes fuera del viewport
     inicial.
+
+-   Priorización del LCP: **Nunca** aplicar `loading="lazy"` a la imagen
+    principal visible *Above the Fold* (LCP). Usar `loading="eager"`,
+    `fetchpriority="high"` y, cuando aporte valor, `<link rel="preload"
+    as="image">`.
 
 -   No utilizar imágenes excesivamente grandes para espacios pequeños.
 
@@ -391,25 +404,39 @@ de búsqueda.
 
 No realizar prácticas de keyword stuffing.
 
-# 11. JavaScript
+# 11. JavaScript y Primitivas Nativas de la Plataforma
 
-JavaScript debe utilizarse únicamente cuando aporte una funcionalidad real.
+JavaScript debe utilizarse únicamente cuando aporte una funcionalidad real que
+no pueda resolverse de forma nativa con HTML y CSS modernos (*Baseline*).
 
-Priorizar HTML y CSS cuando sean suficientes.
+Antes de escribir JavaScript personalizado, evaluar siempre las primitivas
+nativas del navegador:
 
-Ejemplos de funcionalidades apropiadas:
+-   **Modales y diálogos:** `<dialog>` y el atributo `inert` (con manejo de
+    foco, capa superior y cierre con `Esc` nativos).
 
--   Menú móvil.
+-   **Popovers y menús emergentes:** Popover API (`popover`, `popovertarget`).
 
--   Galerías interactivas.
+-   **Acordeones:** `<details>` + `<summary>` (usando el atributo `name` para
+    acordeones exclusivos sin JS).
 
--   Modales.
+-   **Validación de formularios:** Constraint Validation API nativa (`required`,
+    `type`, `pattern`) combinada con pseudoclases CSS `:user-invalid` y
+    `:user-valid`.
 
--   Validaciones.
+-   **Diseño y animaciones:** Container Queries, CSS Subgrid, `:has()`,
+    transiciones CSS y *View Transitions* / *Scroll-Driven Animations* cuando
+    corresponda.
 
--   Interacciones específicas.
+Ejemplos donde JavaScript ligero sí aporta valor real:
 
--   Animaciones que requieran JavaScript.
+-   Menú móvil interactivo (cuando supere las capacidades de CSS/Popover).
+
+-   Galerías y comparadores interactivos (ej. sliders táctiles/de puntero).
+
+-   Filtros dinámicos en cliente e integraciones con WhatsApp/formularios.
+
+-   Interacciones específicas que requieran estado en tiempo real.
 
 Evitar convertir funcionalidades sencillas en soluciones JavaScript
 innecesariamente complejas.
@@ -445,9 +472,11 @@ Respetar `prefers-reduced-motion` cuando corresponda.
 
 Los formularios deben:
 
--   Tener labels claros.
+-   Tener labels claros y atributos `autocomplete` semánticos (`name`, `tel`,
+    `email`, etc.) para facilitar el autocompletado en móvil y cumplir WCAG.
 
--   Validar los datos.
+-   Validar los datos aprovechando la validación nativa HTML y pseudoclases
+    `:user-invalid` / `:user-valid` antes de duplicar lógica en JS.
 
 -   Mostrar mensajes de error comprensibles.
 
@@ -475,6 +504,15 @@ Aunque estos proyectos sean principalmente frontend:
 
 -   Validar datos enviados a servicios externos.
 
+-   Prevenir XSS en el DOM: **Prohibido** inyectar datos de usuario mediante
+    `innerHTML`; utilizar siempre `textContent` o APIs seguras de sanitización.
+
+-   Usar siempre `rel="noopener noreferrer"` en enlaces con `target="_blank"` y
+    en aperturas programáticas (`window.open(..., '_blank', 'noopener,noreferrer')`).
+
+-   Considerar cabeceras de seguridad estándar como *Content Security Policy
+    (CSP)* al desplegar en producción.
+
 -   Mantener dependencias actualizadas.
 
 -   Evitar dependencias innecesarias.
@@ -489,8 +527,9 @@ el usuario.
 El contenido del negocio se encuentra definido en `BRIEF.md`.
 
 Lo que no encuentres como un preliminar inventarlo acorde al contenido del
-brief, que información se podría solicitar y que puede estar o no en el
-brief.md:
+brief, dejando siempre claramente marcado o documentado qué valores son
+preliminares (`[PENDIENTE CLIENTE]`) para su validación antes de publicar en
+producción. Información que puede estar o no en el `BRIEF.md`:
 
 -   Precios.
 

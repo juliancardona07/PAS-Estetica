@@ -52,6 +52,13 @@
     border-radius: 4px;
   }
 
+  /* Native Baseline form validation feedback (only after user interaction) */
+  input:user-invalid,
+  textarea:user-invalid,
+  select:user-invalid {
+    border-color: #e11d48;
+  }
+
   /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     *, ::before, ::after {
