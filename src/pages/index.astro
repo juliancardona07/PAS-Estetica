@@ -2,9 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import AboutSection from '../components/AboutSection.astro';
 import ServicesSection from '../components/ServicesSection.astro';
 import PhilosophySection from '../components/PhilosophySection.astro';
-import AboutSection from '../components/AboutSection.astro';
 import GallerySection from '../components/GallerySection.astro';
 import Testimonials from '../components/Testimonials.astro';
 import WellnessPolicy from '../components/WellnessPolicy.astro';
@@ -20,16 +20,16 @@ import ContactSection from '../components/ContactSection.astro';
   <Hero />
   <SectionDivider />
 
-  <!-- 2. Servicios (/#servicios) -->
+  <!-- 2. Nosotros (/#nosotros: Quién está detrás de P.A.S) -->
+  <AboutSection />
+  <SectionDivider />
+
+  <!-- 3. Servicios (/#servicios) -->
   <ServicesSection />
   <SectionDivider />
 
-  <!-- 3. Filosofía 360° (/#filosofia) -->
+  <!-- 4. Filosofía 360° (/#filosofia) -->
   <PhilosophySection />
-  <SectionDivider />
-
-  <!-- 4. Nosotros (/#nosotros) -->
-  <AboutSection />
   <SectionDivider />
 
   <!-- 5. Experiencia (/#experiencia) -->
