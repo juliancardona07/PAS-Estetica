@@ -31,7 +31,7 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
   ></div>
 
   <!-- LAYER 3: Centered Editorial Content -->
-  <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-24 sm:pb-24 text-center flex flex-col items-center">
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 sm:pt-24 sm:pb-32 text-center flex flex-col items-center">
     
     <!-- Location & Concept Pill -->
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/12 backdrop-blur-md border border-white/25 text-teal-200 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm mb-6">
@@ -97,15 +97,25 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
 
   </div>
 
-  <!-- Clean Organic Arch Transition into next section (stone-50) without milky gradient fog -->
-  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-10 overflow-hidden leading-none" aria-hidden="true">
+  <!-- Graceful Layered Organic Wave Transition into next section (stone-50) -->
+  <div class="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 overflow-hidden leading-none" aria-hidden="true">
     <svg
-      class="relative block w-full h-6 sm:h-9"
-      viewBox="0 0 1440 48"
+      class="relative block w-full h-14 sm:h-20 lg:h-24"
+      viewBox="0 0 1440 100"
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M0,48 L0,20 Q720,0 1440,20 L1440,48 Z" fill="#FAFAF9" />
+      <!-- Soft translucent lila aura curve echoing the P.A.S ribbon -->
+      <path
+        d="M0,100 L0,18 C420,98 1020,98 1440,18 L1440,100 Z"
+        fill="#D2BEE3"
+        fill-opacity="0.32"
+      />
+      <!-- Main clean stone-50 sweeping curve -->
+      <path
+        d="M0,100 L0,36 C420,104 1020,104 1440,36 L1440,100 Z"
+        fill="#FAFAF9"
+      />
     </svg>
   </div>
 </section>
