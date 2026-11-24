@@ -88,8 +88,26 @@
   }
 }
 
+@keyframes heroKenBurnsMobile {
+  0% {
+    transform: scale(1.04) translate3d(2.5%, 0, 0);
+  }
+  50% {
+    transform: scale(1.22) translate3d(-3.5%, -1.5%, 0);
+  }
+  100% {
+    transform: scale(1.04) translate3d(2.5%, 0, 0);
+  }
+}
+
 .animate-hero-kenburns {
-  animation: heroKenBurns 14s ease-in-out infinite;
+  animation: heroKenBurnsMobile 12s ease-in-out infinite;
   will-change: transform;
+}
+
+@media (min-width: 1024px) {
+  .animate-hero-kenburns {
+    animation: heroKenBurns 14s ease-in-out infinite;
+  }
 }
 
