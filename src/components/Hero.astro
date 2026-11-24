@@ -31,7 +31,7 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
   ></div>
 
   <!-- LAYER 3: Centered Editorial Content -->
-  <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center flex flex-col items-center">
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-28 sm:pt-24 sm:pb-36 text-center flex flex-col items-center">
     
     <!-- Location & Concept Pill -->
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/12 backdrop-blur-md border border-white/25 text-teal-200 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm mb-6">
@@ -96,6 +96,12 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
     </p>
 
   </div>
+
+  <!-- Smooth Bottom Gradient Dissolve into next section (stone-50 / AboutSection) -->
+  <div
+    class="pointer-events-none absolute inset-x-0 bottom-0 h-28 sm:h-40 bg-gradient-to-t from-stone-50 via-stone-50/65 via-35% to-transparent z-10"
+    aria-hidden="true"
+  ></div>
 </section>
 
 <!-- =====================================================================
