@@ -97,11 +97,17 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
 
   </div>
 
-  <!-- Subtle Bottom Gradient Transition into next section (stone-50 / AboutSection) -->
-  <div
-    class="pointer-events-none absolute inset-x-0 bottom-0 h-12 sm:h-16 bg-gradient-to-t from-stone-50 via-stone-50/40 to-transparent z-10"
-    aria-hidden="true"
-  ></div>
+  <!-- Clean Organic Arch Transition into next section (stone-50) without milky gradient fog -->
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-10 overflow-hidden leading-none" aria-hidden="true">
+    <svg
+      class="relative block w-full h-6 sm:h-9"
+      viewBox="0 0 1440 48"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0,48 L0,20 Q720,0 1440,20 L1440,48 Z" fill="#FAFAF9" />
+    </svg>
+  </div>
 </section>
 
 <!-- =====================================================================
