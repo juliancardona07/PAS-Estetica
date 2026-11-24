@@ -4,9 +4,9 @@ const whatsappCorporalUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi 
 const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi los resultados Faciales en la web de P.A.S y deseo agendar una valoración personalizada.");
 ---
 
-<section id="inicio" class="relative min-h-[78vh] sm:min-h-[82vh] flex items-center justify-center overflow-hidden bg-[#1F142C] text-white isolate scroll-mt-24">
+<section id="inicio" class="relative min-h-[80vh] flex items-center overflow-hidden bg-[#1F142C] text-white isolate scroll-mt-24">
   
-  <!-- LAYER 1: Full-Bleed Panoramic HD Sanctuary Photography with Slow Ken Burns CSS Zoom -->
+  <!-- LAYER 1: Full-Bleed Panoramic HD Sanctuary Photography with Cinematic Ken Burns Zoom + Pan -->
   <div class="absolute inset-0 -z-20 overflow-hidden" aria-hidden="true">
     <img
       src="/images/hero-sanctuary-hd.webp"
@@ -20,81 +20,190 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
     />
   </div>
 
-  <!-- LAYER 2: Editorial Atmospheric Veil (WCAG AAA contrast while preserving warm candlelight & lila/mint tones) -->
+  <!-- LAYER 2: Editorial Atmospheric Veil (WCAG AAA contrast while letting candlelight & lila/mint tones shine) -->
   <div
-    class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1E122C]/75 via-[#2B1A3E]/60 to-[#112A28]/82 pointer-events-none"
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-[#1D112B]/84 via-[#2A193C]/68 to-[#122B29]/72 pointer-events-none"
     aria-hidden="true"
   ></div>
   <div
-    class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(30,18,44,0.35)_0%,rgba(18,12,28,0.68)_100%)] pointer-events-none"
+    class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1A1026]/50 via-transparent to-[#150E20]/70 pointer-events-none"
     aria-hidden="true"
   ></div>
 
-  <!-- LAYER 3: Centered Editorial Content -->
-  <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 sm:pt-24 sm:pb-32 text-center flex flex-col items-center">
-    
-    <!-- Location & Concept Pill -->
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/12 backdrop-blur-md border border-white/25 text-teal-200 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm mb-6">
-      <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-      <span>Salud, Belleza &amp; Bienestar Emocional · Bogotá</span>
-    </div>
+  <!-- LAYER 3: Asymmetric Full-Bleed Composition (Editorial Copy + Visible Interactive Before/After) -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-28 sm:pt-16 sm:pb-32 lg:pt-20 lg:pb-36">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
+      
+      <!-- LEFT COLUMN: Editorial Headline, Pillars & CTA (6 cols) -->
+      <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+        
+        <!-- Location & Concept Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/12 backdrop-blur-md border border-white/25 text-teal-200 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          <span>Salud, Belleza &amp; Bienestar Emocional · Bogotá</span>
+        </div>
 
-    <!-- Main Editorial H1 -->
-    <h1 class="text-4xl sm:text-5xl lg:text-[4rem] font-bold tracking-tight text-white leading-[1.12] max-w-4xl drop-shadow-xs">
-      Tu refugio de pausa. <br class="hidden sm:inline" />
-      <span class="font-serif italic font-normal text-teal-200">Belleza consciente</span>
-      que sana desde el interior.
-    </h1>
+        <!-- Main Editorial H1 -->
+        <h1 class="text-3xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-white leading-[1.12] drop-shadow-xs">
+          Tu refugio de pausa. <br class="hidden sm:inline" />
+          <span class="font-serif italic font-normal text-teal-200">Belleza consciente</span> <br class="hidden sm:inline" />
+          que sana desde el interior.
+        </h1>
 
-    <!-- Concise Sanctuary Narrative -->
-    <p class="mt-6 text-base sm:text-lg lg:text-xl text-purple-50/90 max-w-2xl leading-relaxed font-normal">
-      Más que una cabina estética tradicional, <strong class="text-white font-semibold">P.A.S</strong> es un santuario privado donde unimos protocolos de alta eficacia dérmica con aromaterapia y armonización energética.
-    </p>
+        <!-- Concise Sanctuary Narrative -->
+        <p class="text-base sm:text-lg text-purple-50/90 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Más que una cabina estética tradicional, <strong class="text-white font-semibold">P.A.S</strong> es un santuario privado donde unimos protocolos de alta eficacia dérmica con aromaterapia y armonización energética.
+        </p>
 
-    <!-- Primary Actions -->
-    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-      <button
-        type="button"
-        id="open-results-dialog"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm sm:text-base font-bold text-purple-950 bg-white hover:bg-purple-50 active:bg-purple-100 shadow-[0_12px_35px_rgba(0,0,0,0.28)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-all duration-200 focus:outline-hidden focus:ring-4 focus:ring-teal-300/70 min-h-[52px] cursor-pointer"
-      >
-        <svg class="w-5 h-5 text-teal-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-        </svg>
-        <span>Ver Resultados Antes / Después</span>
-      </button>
+        <!-- Frosted Glass Pillars Strip -->
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-4 p-3.5 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg max-w-xl mx-auto lg:mx-0">
+          <div class="px-1 text-center lg:text-left">
+            <p class="font-serif text-xl sm:text-2xl font-bold text-teal-200">360°</p>
+            <p class="text-xs text-purple-100/90 mt-0.5">Cuerpo, mente y energía</p>
+          </div>
+          <div class="px-2 text-center lg:text-left border-x border-white/15">
+            <p class="font-serif text-xl sm:text-2xl font-bold text-teal-200">1 a 1</p>
+            <p class="text-xs text-purple-100/90 mt-0.5">Cabina privada sin prisas</p>
+          </div>
+          <div class="px-1 text-center lg:text-left">
+            <p class="font-serif text-xl sm:text-2xl font-bold text-teal-200">100%</p>
+            <p class="text-xs text-purple-100/90 mt-0.5">Personalizado a tu piel</p>
+          </div>
+        </div>
 
-      <a
-        href="#servicios"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm sm:text-base font-semibold text-white bg-white/12 hover:bg-white/20 backdrop-blur-md border border-white/30 transition-all duration-200 focus:outline-hidden focus:ring-4 focus:ring-purple-300/60 min-h-[52px]"
-      >
-        <span>Explorar Tratamientos</span>
-        <span aria-hidden="true">↓</span>
-      </a>
-    </div>
+        <!-- Secondary CTA + Location -->
+        <div class="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a
+            href="#servicios"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-bold text-purple-950 bg-white hover:bg-purple-50 shadow-lg transition-all duration-200 focus:outline-hidden focus:ring-4 focus:ring-teal-300/70 min-h-[48px]"
+          >
+            <span>Explorar Tratamientos</span>
+            <span aria-hidden="true">↓</span>
+          </a>
 
-    <!-- Frosted Glass Pillars Strip -->
-    <div class="mt-12 sm:mt-16 w-full max-w-3xl grid grid-cols-3 gap-2.5 sm:gap-5 p-3.5 sm:p-5 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
-      <div class="px-2 py-1 text-center">
-        <p class="font-serif text-xl sm:text-2xl font-bold text-teal-200">360°</p>
-        <p class="text-xs text-purple-100/90 mt-0.5">Cuerpo, mente y energía</p>
+          <p class="text-xs sm:text-sm text-purple-100/85 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span>Carrera 53A #127 · Cita previa</span>
+          </p>
+        </div>
+
       </div>
-      <div class="px-2 py-1 text-center border-x border-white/15">
-        <p class="font-serif text-xl sm:text-2xl font-bold text-teal-200">1 a 1</p>
-        <p class="text-xs text-purple-100/90 mt-0.5">Cabina privada sin prisas</p>
+
+      <!-- RIGHT COLUMN: Always-Visible Frosted Glass Before/After Comparator (Corporal & Facial) (6 cols) -->
+      <div class="lg:col-span-6">
+        <div class="relative mx-auto max-w-lg lg:max-w-none rounded-3xl p-3 sm:p-4 bg-white/14 backdrop-blur-xl border border-white/25 shadow-[0_24px_60px_rgba(0,0,0,0.42)]">
+          
+          <!-- Header & Direct Tabs: Corporal vs Facial -->
+          <div class="mb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+            <div class="flex items-center gap-2 px-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse shrink-0"></span>
+              <h2 class="text-xs sm:text-sm font-bold tracking-wide text-white uppercase">
+                Resultados Reales
+              </h2>
+            </div>
+
+            <div
+              class="p-1 rounded-xl bg-black/25 border border-white/15 grid grid-cols-2 gap-1"
+              role="tablist"
+              aria-label="Seleccionar tipo de resultado antes y después"
+            >
+              <button
+                type="button"
+                id="hero-tab-corporal"
+                role="tab"
+                aria-selected="true"
+                class="py-1.5 px-3 rounded-lg text-xs font-bold transition-all bg-white text-purple-950 shadow-xs cursor-pointer min-h-[36px]"
+              >
+                🌿 Corporal
+              </button>
+              <button
+                type="button"
+                id="hero-tab-facial"
+                role="tab"
+                aria-selected="false"
+                class="py-1.5 px-3 rounded-lg text-xs font-semibold transition-all text-purple-100 hover:bg-white/10 cursor-pointer min-h-[36px]"
+              >
+                ✨ Facial
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Before / After Slider -->
+          <div
+            id="hero-ba-container"
+            role="slider"
+            tabindex="0"
+            aria-label="Deslizador de comparación antes y después"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="50"
+            class="relative w-full aspect-4/3 rounded-2xl overflow-hidden cursor-ew-resize touch-none select-none border-2 border-white/80 shadow-lg focus-visible:outline-2 focus-visible:outline-teal-300 bg-stone-900"
+          >
+            <!-- AFTER Image -->
+            <img
+              id="hero-after-img"
+              src="/images/abdomen-despues.webp"
+              alt="Abdomen después de sesión de moldeo corporal y reducción en P.A.S"
+              width="640"
+              height="520"
+              loading="eager"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            />
+            <div class="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-teal-600/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-md pointer-events-none">
+              Después
+            </div>
+
+            <!-- BEFORE Image (Clipped Overlay) -->
+            <div id="hero-before-layer" class="absolute inset-y-0 left-0 overflow-hidden w-1/2 pointer-events-none will-change-[width]">
+              <img
+                id="hero-before-img"
+                src="/images/abdomen-antes.webp"
+                alt="Abdomen antes de sesión de moldeo corporal y reducción en P.A.S"
+                width="640"
+                height="520"
+                loading="eager"
+                decoding="async"
+                class="absolute inset-y-0 left-0 w-full h-full object-cover max-w-none"
+              />
+              <div class="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-purple-900/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-md pointer-events-none">
+                Antes
+              </div>
+            </div>
+
+            <!-- Draggable Divider Handle -->
+            <div id="hero-slider-handle" class="absolute inset-y-0 left-1/2 -ml-0.5 w-1 bg-white shadow-2xl pointer-events-none will-change-[left]">
+              <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-gradient-to-r from-purple-700 to-teal-600 text-white shadow-xl flex items-center justify-center border-2 border-white ring-4 ring-purple-300/40">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.5 7l-5 5 5 5V7zm7 10l5-5-5-5v10z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Bar inside Glass Card -->
+          <div class="mt-3 px-1 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+            <p id="hero-case-caption" class="text-xs text-purple-100/95 text-center sm:text-left">
+              Desliza para comparar · <strong class="text-white">Moldeo Corporal &amp; Reducción</strong>
+            </p>
+            <a
+              id="hero-case-whatsapp"
+              href={whatsappCorporalUrl}
+              data-corporal-url={whatsappCorporalUrl}
+              data-facial-url={whatsappFacialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs transition-colors shadow-sm min-h-[38px]"
+            >
+              <span>Quiero este resultado</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
       </div>
-      <div class="px-2 py-1 text-center">
-        <p class="font-serif text-xl sm:text-2xl font-bold text-teal-200">100%</p>
-        <p class="text-xs text-purple-100/90 mt-0.5">Personalizado a tu piel</p>
-      </div>
+
     </div>
-
-    <!-- Subtle Bogotá Location Caption -->
-    <p class="mt-5 text-xs sm:text-sm text-purple-100/80 flex items-center justify-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>Atención exclusiva con cita previa · Carrera 53A #127, Bogotá</span>
-    </p>
-
   </div>
 
   <!-- Graceful Layered Organic Wave Transition into next section (stone-50) -->
@@ -105,13 +214,11 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <!-- Soft translucent lila aura curve echoing the P.A.S ribbon -->
       <path
         d="M0,100 L0,18 C420,98 1020,98 1440,18 L1440,100 Z"
         fill="#D2BEE3"
         fill-opacity="0.32"
       />
-      <!-- Main clean stone-50 sweeping curve -->
       <path
         d="M0,100 L0,36 C420,104 1020,104 1440,36 L1440,100 Z"
         fill="#FAFAF9"
@@ -120,157 +227,20 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
   </div>
 </section>
 
-<!-- =====================================================================
-     MODAL NATIVO HTML5 <dialog> (Baseline, 0 KB de librerías)
-     Comparador interactivo Antes y Después: Corporal & Facial
-     ===================================================================== -->
-<dialog
-  id="results-dialog"
-  aria-labelledby="results-dialog-title"
-  class="m-auto w-[94%] max-w-2xl rounded-3xl p-0 bg-white text-slate-900 shadow-2xl border border-purple-200 overflow-hidden"
->
-  <!-- Modal Header -->
-  <div class="bg-gradient-to-r from-purple-950 via-purple-800 to-teal-800 px-5 sm:px-6 py-4 flex items-center justify-between text-white">
-    <div class="flex items-center gap-2.5">
-      <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
-      <h2 id="results-dialog-title" class="text-sm sm:text-base font-bold tracking-wide">
-        Resultados Reales P.A.S · Antes y Después
-      </h2>
-    </div>
-    <button
-      type="button"
-      id="close-results-dialog"
-      class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors focus:outline-hidden focus:ring-2 focus:ring-teal-300 cursor-pointer"
-      aria-label="Cerrar ventana de resultados"
-    >
-      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Modal Body -->
-  <div class="p-4 sm:p-6 space-y-4">
-    
-    <!-- Case Switcher Tabs: Corporal vs Facial -->
-    <div
-      class="p-1.5 rounded-2xl bg-purple-50 border border-purple-200/80 grid grid-cols-2 gap-1.5"
-      role="tablist"
-      aria-label="Seleccionar tipo de resultado"
-    >
-      <button
-        type="button"
-        id="dialog-tab-corporal"
-        role="tab"
-        aria-selected="true"
-        class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-purple-700 text-white shadow-xs cursor-pointer min-h-[44px]"
-      >
-        🌿 Moldeo Corporal
-      </button>
-      <button
-        type="button"
-        id="dialog-tab-facial"
-        role="tab"
-        aria-selected="false"
-        class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-700 hover:text-purple-900 hover:bg-white/80 cursor-pointer min-h-[44px]"
-      >
-        ✨ Estética Facial
-      </button>
-    </div>
-
-    <!-- Interactive Before / After Slider inside the Dialog -->
-    <div
-      id="dialog-ba-container"
-      role="slider"
-      tabindex="0"
-      aria-label="Deslizador de comparación antes y después"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      aria-valuenow="50"
-      class="relative w-full aspect-4/3 rounded-2xl overflow-hidden cursor-ew-resize touch-none select-none border-2 border-purple-100 shadow-inner focus-visible:outline-2 focus-visible:outline-purple-700 bg-stone-100"
-    >
-      <!-- AFTER Image -->
-      <img
-        id="dialog-after-img"
-        src="/images/abdomen-despues.webp"
-        alt="Abdomen después de sesión de moldeo corporal y reducción en P.A.S"
-        width="640"
-        height="520"
-        loading="lazy"
-        decoding="async"
-        class="absolute inset-0 w-full h-full object-cover pointer-events-none"
-      />
-      <div class="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-teal-600/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-md pointer-events-none">
-        Después
-      </div>
-
-      <!-- BEFORE Image (Clipped Overlay) -->
-      <div id="dialog-before-layer" class="absolute inset-y-0 left-0 overflow-hidden w-1/2 pointer-events-none will-change-[width]">
-        <img
-          id="dialog-before-img"
-          src="/images/abdomen-antes.webp"
-          alt="Abdomen antes de sesión de moldeo corporal y reducción en P.A.S"
-          width="640"
-          height="520"
-          loading="lazy"
-          decoding="async"
-          class="absolute inset-y-0 left-0 w-full h-full object-cover max-w-none"
-        />
-        <div class="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-purple-900/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-md pointer-events-none">
-          Antes
-        </div>
-      </div>
-
-      <!-- Draggable Divider Handle -->
-      <div id="dialog-slider-handle" class="absolute inset-y-0 left-1/2 -ml-0.5 w-1 bg-white shadow-2xl pointer-events-none will-change-[left]">
-        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-gradient-to-r from-purple-700 to-teal-600 text-white shadow-xl flex items-center justify-center border-2 border-white ring-4 ring-purple-300/40">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M8.5 7l-5 5 5 5V7zm7 10l5-5-5-5v10z" />
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- Case Caption & Direct WhatsApp Conversion CTA -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
-      <p id="dialog-case-caption" class="text-xs sm:text-sm text-slate-600 text-center sm:text-left">
-        <strong class="text-purple-950">Moldeo Corporal &amp; Drenaje:</strong> Desliza la barra para comparar el cambio real.
-      </p>
-      <a
-        id="dialog-whatsapp-cta"
-        href={whatsappCorporalUrl}
-        data-corporal-url={whatsappCorporalUrl}
-        data-facial-url={whatsappFacialUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-purple-700 hover:bg-purple-800 shadow-sm transition-colors min-h-[44px]"
-      >
-        <span>Agendar Valoración</span>
-        <span aria-hidden="true">→</span>
-      </a>
-    </div>
-
-  </div>
-</dialog>
-
 <script>
-  function initFullBleedHeroDialog() {
-    const dialog = document.getElementById('results-dialog') as HTMLDialogElement | null;
-    const openBtn = document.getElementById('open-results-dialog');
-    const closeBtn = document.getElementById('close-results-dialog');
+  function initHeroComparator() {
+    const tabCorporal = document.getElementById('hero-tab-corporal');
+    const tabFacial = document.getElementById('hero-tab-facial');
 
-    const tabCorporal = document.getElementById('dialog-tab-corporal');
-    const tabFacial = document.getElementById('dialog-tab-facial');
+    const container = document.getElementById('hero-ba-container');
+    const beforeLayer = document.getElementById('hero-before-layer') as HTMLElement | null;
+    const beforeImg = document.getElementById('hero-before-img') as HTMLImageElement | null;
+    const afterImg = document.getElementById('hero-after-img') as HTMLImageElement | null;
+    const handle = document.getElementById('hero-slider-handle') as HTMLElement | null;
+    const caption = document.getElementById('hero-case-caption');
+    const whatsappCta = document.getElementById('hero-case-whatsapp') as HTMLAnchorElement | null;
 
-    const container = document.getElementById('dialog-ba-container');
-    const beforeLayer = document.getElementById('dialog-before-layer') as HTMLElement | null;
-    const beforeImg = document.getElementById('dialog-before-img') as HTMLImageElement | null;
-    const afterImg = document.getElementById('dialog-after-img') as HTMLImageElement | null;
-    const handle = document.getElementById('dialog-slider-handle') as HTMLElement | null;
-    const caption = document.getElementById('dialog-case-caption');
-    const whatsappCta = document.getElementById('dialog-whatsapp-cta') as HTMLAnchorElement | null;
-
-    if (!dialog || !openBtn || !container || !beforeLayer || !beforeImg || !afterImg || !handle) return;
+    if (!container || !beforeLayer || !beforeImg || !afterImg || !handle) return;
 
     let isInteracting = false;
     let currentPercent = 50;
@@ -303,35 +273,9 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
       applyPercent((x / containerRect.width) * 100);
     }
 
-    // Open & Close native <dialog>
-    openBtn.addEventListener('click', () => {
-      dialog.showModal();
-      requestAnimationFrame(() => {
-        syncBeforeImageWidth();
-        applyPercent(50);
-      });
-    });
+    window.addEventListener('resize', syncBeforeImageWidth);
+    syncBeforeImageWidth();
 
-    closeBtn?.addEventListener('click', () => dialog.close());
-
-    // Close when clicking the backdrop outside the modal box
-    dialog.addEventListener('click', (e: MouseEvent) => {
-      const rect = dialog.getBoundingClientRect();
-      const clickedInside =
-        e.clientX >= rect.left &&
-        e.clientX <= rect.right &&
-        e.clientY >= rect.top &&
-        e.clientY <= rect.bottom;
-      if (!clickedInside) {
-        dialog.close();
-      }
-    });
-
-    window.addEventListener('resize', () => {
-      if (dialog.open) syncBeforeImageWidth();
-    });
-
-    // Pointer, Touch & Keyboard slider controls
     container.addEventListener('pointerdown', (e: PointerEvent) => {
       isInteracting = true;
       container.setPointerCapture(e.pointerId);
@@ -378,12 +322,11 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
       }
     });
 
-    // Switch between Corporal & Facial cases inside the modal
     function selectCase(mode: 'corporal' | 'facial') {
       if (!tabCorporal || !tabFacial || !beforeImg || !afterImg || !caption || !whatsappCta) return;
 
-      const activeClass = 'py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-purple-700 text-white shadow-xs cursor-pointer min-h-[44px]';
-      const inactiveClass = 'py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-700 hover:text-purple-900 hover:bg-white/80 cursor-pointer min-h-[44px]';
+      const activeClass = 'py-1.5 px-3 rounded-lg text-xs font-bold transition-all bg-white text-purple-950 shadow-xs cursor-pointer min-h-[36px]';
+      const inactiveClass = 'py-1.5 px-3 rounded-lg text-xs font-semibold transition-all text-purple-100 hover:bg-white/10 cursor-pointer min-h-[36px]';
 
       if (mode === 'corporal') {
         tabCorporal.setAttribute('aria-selected', 'true');
@@ -396,7 +339,7 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
         afterImg.src = '/images/abdomen-despues.webp';
         afterImg.alt = 'Abdomen después de sesión de moldeo corporal y reducción en P.A.S';
 
-        caption.textContent = 'Moldeo Corporal & Drenaje: desliza la barra para comparar el resultado real.';
+        caption.textContent = 'Desliza para comparar · Moldeo Corporal & Reducción';
         whatsappCta.href = whatsappCta.dataset.corporalUrl || whatsappCta.href;
       } else {
         tabFacial.setAttribute('aria-selected', 'true');
@@ -409,7 +352,7 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
         afterImg.src = '/images/facial-despues.webp';
         afterImg.alt = 'Rostro después de tratamiento facial holístico en P.A.S';
 
-        caption.textContent = 'Estética Facial Holística: desliza la barra para comparar luminosidad y textura.';
+        caption.textContent = 'Desliza para comparar · Estética Facial Holística';
         whatsappCta.href = whatsappCta.dataset.facialUrl || whatsappCta.href;
       }
 
@@ -422,8 +365,8 @@ const whatsappFacialUrl = whatsappBase + encodeURIComponent("¡Hola Paula! Vi lo
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFullBleedHeroDialog);
+    document.addEventListener('DOMContentLoaded', initHeroComparator);
   } else {
-    initFullBleedHeroDialog();
+    initHeroComparator();
   }
 </script>
