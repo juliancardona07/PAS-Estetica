@@ -65,49 +65,55 @@
     backdrop-filter: blur(8px);
   }
 
-  /* Respect reduced motion */
+  /* Respect reduced motion for UI transitions while allowing explicit ambient classes to opt-out gracefully */
   @media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
+    html {
+      scroll-behavior: auto;
+    }
+    *:not(.animate-hero-kenburns),
+    *:not(.animate-hero-kenburns)::before,
+    *:not(.animate-hero-kenburns)::after {
       transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
     }
   }
 }
 
 @keyframes heroKenBurns {
   0% {
-    transform: scale(1) translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   }
   50% {
-    transform: scale(1.16) translate3d(-1.5%, -1%, 0);
+    transform: translate3d(-1.5%, -1%, 0) scale3d(1.16, 1.16, 1);
   }
   100% {
-    transform: scale(1) translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   }
 }
 
 @keyframes heroKenBurnsMobile {
   0% {
-    transform: scale(1.04) translate3d(2.5%, 0, 0);
+    transform: translate3d(2.5%, 0, 0) scale3d(1.04, 1.04, 1);
   }
   50% {
-    transform: scale(1.22) translate3d(-3.5%, -1.5%, 0);
+    transform: translate3d(-3.5%, -1.5%, 0) scale3d(1.22, 1.22, 1);
   }
   100% {
-    transform: scale(1.04) translate3d(2.5%, 0, 0);
+    transform: translate3d(2.5%, 0, 0) scale3d(1.04, 1.04, 1);
   }
 }
 
 .animate-hero-kenburns {
-  animation: heroKenBurnsMobile 12s ease-in-out infinite;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   will-change: transform;
+  animation: heroKenBurnsMobile 12s ease-in-out infinite;
+  -webkit-animation: heroKenBurnsMobile 12s ease-in-out infinite;
 }
 
 @media (min-width: 1024px) {
   .animate-hero-kenburns {
     animation: heroKenBurns 14s ease-in-out infinite;
+    -webkit-animation: heroKenBurns 14s ease-in-out infinite;
   }
 }
-

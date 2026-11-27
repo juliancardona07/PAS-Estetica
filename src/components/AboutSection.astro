@@ -1,32 +1,66 @@
 ---
+const founderPhotos = [
+  {
+    src: "/images/founder-paula.webp",
+    alt: "Paula Andrea Suárez - Fundadora y cosmetóloga holística en P.A.S Bogotá"
+  },
+  {
+    src: "/images/founder-paula-2.webp",
+    alt: "Paula Andrea Suárez revisando diagnóstico personalizado de bienestar en P.A.S"
+  },
+  {
+    src: "/images/founder-paula-3.webp",
+    alt: "Paula Andrea Suárez - Especialista en Estética Holística Integral Bogotá"
+  }
+];
 ---
 
 <section id="nosotros" class="py-20 sm:py-28 bg-stone-50 overflow-hidden scroll-mt-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
-      <!-- Founder Photo (5 cols) -->
+      <!-- Founder Dynamic 3-Photo Showcase (5 cols) -->
       <div class="lg:col-span-5 relative">
-        <div class="relative mx-auto max-w-sm lg:max-w-none">
+        <div class="relative mx-auto max-w-sm lg:max-w-none" id="founder-carousel">
           <!-- Backing shadow / border accent -->
-          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-300/40 via-purple-100 to-teal-100/50 -rotate-2 -z-10"></div>
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-300/40 via-purple-100 to-teal-100/50 -rotate-2 -z-10" aria-hidden="true"></div>
           
-          <div class="overflow-hidden rounded-2xl bg-white shadow-xl border border-white">
-            <img
-              src="/images/founder-paula.webp"
-              alt="Paula Andrea Suárez - Especialista en Estética Holística Integral Bogotá"
-              width="600"
-              height="750"
-              class="w-full h-auto object-cover"
-              loading="lazy"
-              decoding="async"
-            />
+          <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl border border-white aspect-4/5">
+            {founderPhotos.map((photo, idx) => (
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width="600"
+                height="750"
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
+                data-founder-slide={idx}
+                class={`founder-slide absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 ease-in-out ${
+                  idx === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'
+                }`}
+              />
+            ))}
+
+            <!-- Subtle interactive slide indicators (bottom-left) -->
+            <div class="absolute bottom-4 left-4 z-20 flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-slate-900/45 backdrop-blur-md">
+              {founderPhotos.map((_, idx) => (
+                <button
+                  type="button"
+                  data-founder-dot={idx}
+                  aria-label={`Ver foto ${idx + 1} de Paula Andrea Suárez`}
+                  aria-current={idx === 0 ? "true" : "false"}
+                  class={`founder-dot h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    idx === 0 ? 'w-6 bg-teal-300' : 'w-2 bg-white/70 hover:bg-white'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
           <!-- Bottom floating badge -->
-          <div class="absolute -bottom-6 -right-4 sm:right-6 bg-white p-4 rounded-2xl shadow-lg border border-purple-100 max-w-[240px]">
+          <div class="absolute -bottom-6 -right-4 sm:right-6 z-20 bg-white p-4 rounded-2xl shadow-lg border border-purple-100 max-w-[240px]">
             <p class="font-serif text-sm font-bold text-slate-900">Paula Andrea Suárez</p>
-            <p class="text-xs text-purple-700 font-medium">Fundadora & Terapeuta Holística</p>
+            <p class="text-xs text-purple-700 font-medium">Fundadora &amp; Terapeuta Holística</p>
             <div class="flex items-center gap-1 mt-1 text-amber-500">
               <span>★★★★★</span>
               <span class="text-[10px] text-slate-500 font-semibold ml-1">Atención 1 a 1</span>
@@ -65,11 +99,79 @@
           «La belleza no consiste en cambiar tus facciones ni en cumplir expectativas ajenas; consiste en permitir que tu luz, salud y bienestar interno se expresen en tu piel y en tu forma de habitar el mundo.»
         </blockquote>
 
-
-
       </div>
 
     </div>
   </div>
 </section>
 
+<script>
+  function initFounderCarousel() {
+    const carousel = document.getElementById('founder-carousel');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll<HTMLImageElement>('.founder-slide'));
+    const dots = Array.from(carousel.querySelectorAll<HTMLButtonElement>('.founder-dot'));
+    if (slides.length < 2) return;
+
+    let activeIndex = 0;
+    let timerId: number | undefined;
+
+    function showSlide(index: number) {
+      activeIndex = index % slides.length;
+      slides.forEach((slide, i) => {
+        if (i === activeIndex) {
+          slide.classList.remove('opacity-0', 'scale-105', 'z-0', 'pointer-events-none');
+          slide.classList.add('opacity-100', 'scale-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'scale-100', 'z-10');
+          slide.classList.add('opacity-0', 'scale-105', 'z-0', 'pointer-events-none');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === activeIndex) {
+          dot.classList.remove('w-2', 'bg-white/70');
+          dot.classList.add('w-6', 'bg-teal-300');
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.classList.remove('w-6', 'bg-teal-300');
+          dot.classList.add('w-2', 'bg-white/70');
+          dot.setAttribute('aria-current', 'false');
+        }
+      });
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      timerId = window.setInterval(() => {
+        showSlide(activeIndex + 1);
+      }, 4500);
+    }
+
+    function stopAutoPlay() {
+      if (timerId !== undefined) {
+        window.clearInterval(timerId);
+        timerId = undefined;
+      }
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+        startAutoPlay();
+      });
+    });
+
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+
+    startAutoPlay();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFounderCarousel);
+  } else {
+    initFounderCarousel();
+  }
+</script>

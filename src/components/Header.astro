@@ -13,39 +13,34 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
 ---
 
 <header class="sticky top-0 z-40 bg-white border-b border-purple-200/90 shadow-xs transition-colors duration-200">
-  <!-- SVG Color-Key Filter: Neutralizes the warm linen background of the video to pure #FFFFFF while keeping Lila & Mint vibrant -->
-  <svg class="sr-only" width="0" height="0" aria-hidden="true" focusable="false">
-    <defs>
-      <filter id="pas-white-key" color-interpolation-filters="sRGB">
-        <!-- Push warm paper highlights (>= 0.82) to pure 1.0 white and neutralize yellow cast -->
-        <feComponentTransfer result="whiter">
-          <feFuncR type="linear" slope="1.55" intercept="-0.25" />
-          <feFuncG type="linear" slope="1.55" intercept="-0.25" />
-          <feFuncB type="linear" slope="1.64" intercept="-0.25" />
-        </feComponentTransfer>
-        <!-- Restore rich saturation to the lila logo and mint lotus / energy ribbons -->
-        <feColorMatrix in="whiter" type="saturate" values="1.45" />
-      </filter>
-    </defs>
-  </svg>
-
   <!-- Brand Top Bar (Lila & Verde Menta) -->
   <div class="h-1 bg-gradient-to-r from-purple-700 via-teal-400 to-purple-600"></div>
 
   <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20 sm:h-24 gap-2">
       
-      <!-- Brand Logo Dynamic Loop Video (100% seamlessly blended into the pure white Header) -->
+      <!-- Brand Logo Dynamic Loop Video (Cross-browser pure white blend + guaranteed static fallback) -->
       <a
         href="/#inicio"
-        class="relative flex items-center justify-center group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-xl overflow-hidden h-14 sm:h-18 md:h-20 w-36 sm:w-44 md:w-52 shrink-0 bg-white"
+        class="relative flex items-center justify-center group focus:outline-hidden focus:ring-2 focus:ring-purple-600 rounded-xl overflow-hidden h-14 sm:h-18 md:h-20 w-36 sm:w-44 md:w-52 shrink-0 bg-white isolate"
         aria-label="P.A.S Estética Holística Integral - Inicio"
       >
+        <!-- Crisp static fallback always underneath so logo NEVER disappears in any browser -->
+        <img
+          src="/images/logo-horizontal-transparent.webp"
+          alt="P.A.S Paula Andrea Suárez - Estética Holística Integral"
+          width="800"
+          height="482"
+          id="header-logo-fallback"
+          class="h-12 sm:h-16 md:h-18 w-auto object-contain transition-opacity duration-300"
+          loading="eager"
+          decoding="sync"
+        />
+
+        <!-- Standard CSS-filtered loop video (100% Safari/iOS/Firefox/Chrome compatible, zero SVG filter bugs) -->
         <video
           id="header-logo-video"
-          style="filter: url(#pas-white-key);"
-          class="w-full h-full object-cover object-center scale-[1.32] mix-blend-multiply pointer-events-none select-none transition-transform duration-300 group-hover:scale-[1.36]"
-          poster="/images/hero-video-poster.webp"
+          class="absolute inset-0 w-full h-full object-cover object-center scale-[1.32] brightness-[1.15] contrast-[1.24] saturate-[1.3] mix-blend-multiply opacity-0 pointer-events-none select-none transition-opacity duration-500 group-hover:scale-[1.36]"
           width="320"
           height="180"
           autoplay
@@ -53,13 +48,13 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
           loop
           playsinline
           webkit-playsinline
-          preload="metadata"
+          preload="auto"
         >
           <source src="/videos/hero-pas-loop.mp4" type="video/mp4" />
         </video>
       </a>
 
-      <!-- Desktop Navigation (Exact 1-to-1 match with all 9 page sections) -->
+      <!-- Desktop Navigation (Exact 1-to-1 match with all 7 page sections) -->
       <nav class="hidden xl:flex items-center space-x-5" aria-label="Navegación principal">
         {navLinks.map((link) => (
           <a
@@ -122,24 +117,50 @@ const whatsappUrl = "https://wa.me/573118735759?text=" + encodeURIComponent("Hol
 </header>
 
 <script>
-  // Pure lightweight client script for mobile menu toggle & header logo video autoplay
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('icon-open');
   const iconClose = document.getElementById('icon-close');
   const navLinks = document.querySelectorAll('.mobile-nav-link');
   const headerVideo = document.getElementById('header-logo-video') as HTMLVideoElement | null;
+  const headerFallback = document.getElementById('header-logo-fallback');
 
   if (headerVideo) {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReducedMotion) {
-      headerVideo.muted = true;
-      headerVideo.defaultMuted = true;
-      headerVideo.playsInline = true;
-      headerVideo.play().catch(() => {});
-    } else {
-      headerVideo.pause();
-    }
+    headerVideo.muted = true;
+    headerVideo.defaultMuted = true;
+    headerVideo.playsInline = true;
+
+    const revealVideo = () => {
+      headerVideo.classList.remove('opacity-0');
+      headerVideo.classList.add('opacity-100');
+      headerFallback?.classList.add('opacity-0');
+    };
+
+    const tryPlayVideo = () => {
+      const p = headerVideo.play();
+      if (p !== undefined) {
+        p.then(revealVideo).catch(() => {
+          // Keep crisp static transparent logo visible if browser blocks autoplay (e.g. iOS Low Power Mode)
+        });
+      }
+    };
+
+    headerVideo.addEventListener('playing', revealVideo);
+    headerVideo.addEventListener('canplay', tryPlayVideo, { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && headerVideo.paused) tryPlayVideo();
+    });
+
+    // Retry once on first user touch/click for strict mobile webviews
+    const unlockOnGesture = () => {
+      if (headerVideo.paused) tryPlayVideo();
+      window.removeEventListener('touchstart', unlockOnGesture);
+      window.removeEventListener('click', unlockOnGesture);
+    };
+    window.addEventListener('touchstart', unlockOnGesture, { passive: true, once: true });
+    window.addEventListener('click', unlockOnGesture, { once: true });
+
+    tryPlayVideo();
   }
 
   if (menuToggle && mobileMenu && iconOpen && iconClose) {
