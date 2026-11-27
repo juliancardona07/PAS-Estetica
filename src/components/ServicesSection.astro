@@ -9,44 +9,37 @@ import ServiceCard from './ServiceCard.astro';
     <!-- Section Title -->
     <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100 text-teal-900 border border-teal-300 text-xs uppercase tracking-widest font-bold">
-        Carta de Tratamientos & Tarifas
+        Carta de Tratamientos &amp; Servicios
       </div>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
         Protocolos diseñados para <span class="font-serif italic font-normal text-purple-800">renovar tu piel y calmar tu mente</span>
       </h2>
       <p class="text-base text-slate-600 leading-relaxed">
-        Tarifas transparentes con acompañamiento individualizado. Sin costos ocultos y con el tiempo justo para que tu experiencia sea plena y sin afanes.
+        Acompañamiento individualizado y protocolos a tu medida con el tiempo justo para que tu experiencia sea plena, respetuosa y sin afanes.
       </p>
 
-      <!-- Category Filter Buttons (pure CSS/accessible JS filter) -->
-      <div class="flex flex-wrap items-center justify-center gap-2 pt-4" id="category-filters">
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 pt-4" id="category-filters">
         <button
           type="button"
           data-category="all"
-          class="filter-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-200 bg-purple-700 text-white min-h-[40px]"
+          class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-200 bg-purple-700 text-white min-h-[44px] cursor-pointer"
         >
-          Todos los Tratamientos
+          Todos los Servicios
         </button>
         <button
           type="button"
-          data-category="Facial Holístico"
-          class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 bg-white text-slate-700 hover:bg-purple-100/70 border border-purple-200/80 min-h-[40px]"
+          data-category="Servicios 1"
+          class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 bg-white text-slate-700 hover:bg-purple-100/70 border border-purple-200/80 min-h-[44px] cursor-pointer"
         >
-          Faciales Holísticos
+          Servicios 1
         </button>
         <button
           type="button"
-          data-category="Corporal Consciente"
-          class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 bg-white text-slate-700 hover:bg-purple-100/70 border border-purple-200/80 min-h-[40px]"
+          data-category="Servicios 2"
+          class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 bg-white text-slate-700 hover:bg-purple-100/70 border border-purple-200/80 min-h-[44px] cursor-pointer"
         >
-          Corporal Consciente
-        </button>
-        <button
-          type="button"
-          data-category="Bienestar & Energía"
-          class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 bg-white text-slate-700 hover:bg-purple-100/70 border border-purple-200/80 min-h-[40px]"
-        >
-          Bienestar & Masajes
+          Servicios 2
         </button>
       </div>
     </div>
@@ -60,26 +53,29 @@ import ServiceCard from './ServiceCard.astro';
             name={service.name}
             category={service.category}
             shortDescription={service.shortDescription}
-            duration={service.duration}
-            price={service.price}
             image={service.image}
             imageWidth={service.imageWidth}
             imageHeight={service.imageHeight}
             popular={service.popular}
             benefits={service.benefits}
+            modalTitle={service.modalTitle}
+            modalHighlight={service.modalHighlight}
+            modalSections={service.modalSections}
+            modalNote={service.modalNote}
+            modalHelper={service.modalHelper}
           />
         </div>
       ))}
     </div>
 
-    <!-- Quick action / Download Catalog banner -->
+    <!-- Diagnostic Consultation Banner -->
     <div class="mt-16 p-8 rounded-3xl bg-white border border-purple-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="space-y-1 text-center md:text-left">
         <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
           ¿Deseas una valoración diagnóstica personalizada?
         </h3>
-        <p class="text-sm text-slate-600">
-          Analizamos tu biotipo cutáneo, nivel de hidratación y necesidades específicas antes de recomendarte cualquier procedimiento.
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Analizamos tu piel, tu cuerpo, tus hábitos y tus necesidades reales sin juicios ni fórmulas genéricas, antes de recomendarte cualquier protocolo, tratamiento o acompañamiento.
         </p>
       </div>
 
@@ -99,13 +95,13 @@ import ServiceCard from './ServiceCard.astro';
 </section>
 
 <script>
-  // Lightweight client filter for service categories
+  // 1. Lightweight client filter for service categories
   const filterBtns = document.querySelectorAll('.filter-btn');
   const serviceItems = document.querySelectorAll('.service-item');
 
-  filterBtns.forEach(btn => {
+  filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => {
+      filterBtns.forEach((b) => {
         b.classList.remove('active', 'bg-purple-700', 'text-white');
         b.classList.add('bg-white', 'text-slate-700');
       });
@@ -114,14 +110,44 @@ import ServiceCard from './ServiceCard.astro';
 
       const selectedCategory = btn.getAttribute('data-category');
 
-      serviceItems.forEach(item => {
+      serviceItems.forEach((item) => {
         const itemCategory = item.getAttribute('data-category');
-        if (selectedCategory === 'all' || itemCategory === selectedCategory || (selectedCategory === 'Bienestar & Energía' && itemCategory === 'Experiencia Signature')) {
+        if (selectedCategory === 'all' || itemCategory === selectedCategory) {
           (item as HTMLElement).style.display = 'block';
         } else {
           (item as HTMLElement).style.display = 'none';
         }
       });
+    });
+  });
+
+  // 2. Native HTML5 <dialog> triggers & backdrop-click close
+  const openModalButtons = document.querySelectorAll('[data-open-service-modal]');
+  openModalButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-open-service-modal');
+      if (!targetId) return;
+      const dialog = document.getElementById(targetId) as HTMLDialogElement | null;
+      dialog?.showModal();
+    });
+  });
+
+  const serviceDialogs = document.querySelectorAll<HTMLDialogElement>('.service-menu-dialog');
+  serviceDialogs.forEach((dialog) => {
+    dialog.querySelectorAll('[data-close-service-modal]').forEach((closeBtn) => {
+      closeBtn.addEventListener('click', () => dialog.close());
+    });
+
+    dialog.addEventListener('click', (e: MouseEvent) => {
+      const rect = dialog.getBoundingClientRect();
+      const clickedInside =
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom;
+      if (!clickedInside) {
+        dialog.close();
+      }
     });
   });
 </script>

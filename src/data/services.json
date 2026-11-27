@@ -1,116 +1,635 @@
 [
   {
-    "id": "limpieza-facial-profunda",
-    "category": "Facial Holístico",
-    "name": "Limpieza Facial Profunda & Oxigenación",
-    "shortDescription": "Higiene facial integral con extracción ultrasónica, alta frecuencia, masaje linfático facial y mascarilla botánica calmante.",
-    "fullDescription": "Protocolo diseñado para limpiar los poros a profundidad, regular la producción sebácea y revitalizar la textura de la piel. Incluye aromaterapia inicial para inducir la calma del sistema nervioso y mascarilla hidroplástica personalizada.",
-    "duration": "75 min",
-    "price": "$120.000 COP",
+    "id": "faciales-holisticos",
+    "category": "Servicios 1",
+    "name": "Faciales Holísticos",
+    "shortDescription": "Protocolos personalizados con aparatología y fórmulas magistrales para renovar tu piel y calmar tu sistema nervioso.",
     "image": "/images/facial-care.webp",
     "imageWidth": 640,
     "imageHeight": 480,
     "popular": true,
     "benefits": [
-      "Extracción delicada sin agredir la piel",
-      "Oxigenación celular y brillo natural",
-      "Masaje descongestivo con cuarzos fríos",
-      "Sensación de ligereza y frescura inmediata"
-    ]
+      {
+        "title": "Diagnóstico consciente",
+        "text": "No aplicamos protocolos en serie; evaluamos tu piel, tu barrera cutánea y tu nivel de tensión o estrés en cada sesión."
+      },
+      {
+        "title": "Tecnología + Calma",
+        "text": "Combinamos activos de alta eficacia y aparatología no invasiva con maniobras manuales que desconectan tu mente."
+      },
+      {
+        "title": "Resultados naturales",
+        "text": "Buscamos una piel luminosa, firme, equilibrada y descansada, respetando la armonía y expresión de tu rostro."
+      }
+    ],
+    "modalTitle": "Menú de Tratamientos — Faciales Holísticos",
+    "modalSections": [
+      {
+        "title": "I. Rituales de Renovación & Calma",
+        "subtitle": "Ideales para limpiar, oxigenar, desinflamar y bajar el estrés acumulado.",
+        "items": [
+          {
+            "name": "Limpieza Facial Holística",
+            "description": "Higiene profunda y consciente para renovar la piel y devolverle su equilibrio natural."
+          },
+          {
+            "name": "Limpieza Facial con Láser Helio-Neón",
+            "description": "Bioestimulación lumínica que apoya la reparación celular, calma rojeces y aporta luminosidad."
+          },
+          {
+            "name": "Limpieza Facial + Láser + Radiofrecuencia",
+            "description": "Limpieza profunda combinada con estímulo térmico y lumínico para mejorar textura y firmeza."
+          },
+          {
+            "name": "Ritual Estrella — Limpieza + Láser + Radiofrecuencia + Masaje Kobido",
+            "badge": "El más elegido",
+            "description": "Tecnología estética unida al arte del masaje facial japonés para liberar tensión muscular, activar la circulación y lograr un efecto lifting natural."
+          },
+          {
+            "name": "Oxigenoterapia Facial",
+            "description": "Infusión de oxígeno puro para revitalizar, refrescar e iluminar pieles cansadas o apagadas."
+          },
+          {
+            "name": "Hidratación Profunda con Cromoterapia",
+            "description": "Hidratación intensiva acompañada de luz terapéutica para armonizar la piel y calmar el sistema nervioso."
+          },
+          {
+            "name": "Drenaje Linfático Facial & Liberación de Bruxismo",
+            "description": "Maniobras enfocadas en desinflamar, drenar retención de líquidos y aliviar la tensión de mandíbula y cuello."
+          },
+          {
+            "name": "Protocolo Purificante & Equilibrio de Barrera",
+            "description": "Tratamiento diseñado para controlar brotes, poros congestionados y sensibilidad asociada al estrés o la polución."
+          },
+          {
+            "name": "Masaje Kobido (Lifting Facial Japonés)",
+            "badge": "Efecto lifting & calma",
+            "description": "Ritual manual ancestral que combina maniobras rápidas, profundas y rítmicas para liberar tensión muscular, estimular la circulación, drenar y lograr un efecto lifting y descansado inmediato."
+          }
+        ]
+      },
+      {
+        "title": "II. Bioestimulación & Calidad de Piel (Skin Quality)",
+        "subtitle": "Regeneración profunda para mejorar textura, firmeza, luminosidad y soporte cutáneo.",
+        "items": [
+          {
+            "name": "NCTF-135HA Polirevitalizante",
+            "description": "Cóctel celular con ácido hialurónico, vitaminas, aminoácidos, minerales, ácidos nucleicos y coenzimas que hidrata a profundidad, redensifica y devuelve luminosidad y firmeza."
+          },
+          {
+            "name": "NCTF-135HA Contorno de Ojos",
+            "description": "Tratamiento focalizado para ojeras, círculos oscuros y mirada cansada."
+          },
+          {
+            "name": "Bioestimulación con P.R.P. (Plasma Rico en Plaquetas)",
+            "description": "Estimulación regenerativa con factores de crecimiento para mejorar la vitalidad y calidad global de la piel."
+          },
+          {
+            "name": "Bioestimulación con Sculptra",
+            "badge": "Firmeza progresiva",
+            "description": "Estimulador de colágeno de acción gradual para recuperar soporte, firmeza y densidad cutánea de forma natural."
+          },
+          {
+            "name": "Bioestimulación con Radiesse",
+            "badge": "Efecto tensor & colágeno",
+            "description": "Tratamiento bioestimulador para mejorar firmeza, calidad de piel y definición sin perder naturalidad."
+          },
+          {
+            "name": "Polinucleótidos — Esperma de Salmón / PDRN",
+            "badge": "Regeneración celular",
+            "description": "Activos regeneradores de alta afinidad cutánea para reparar tejidos, mejorar elasticidad y potenciar la luminosidad."
+          },
+          {
+            "name": "Programa Renovación Celular (Dermapen + Peeling)",
+            "description": "Protocolo progresivo de 4 sesiones para renovar la textura, afinar poros y estimular colágeno."
+          },
+          {
+            "name": "Protocolo Uniformidad & Control de Manchas",
+            "description": "Tratamiento orientado a atenuar pigmentaciones, unificar el tono y proteger la piel frente a la radiación de altura."
+          }
+        ]
+      },
+      {
+        "title": "III. Hidratación Profunda & Remodelación Sin Cirugía",
+        "subtitle": "Definición, suavidad y armonía respetando tus facciones.",
+        "items": [
+          {
+            "name": "Hidratación Profunda con Ácido Hialurónico",
+            "description": "Hidratación intensiva para rostro completo que aporta jugosidad, elasticidad y luminosidad."
+          },
+          {
+            "name": "Hidratación de Labios con Ácido Hialurónico (Sin volumen)",
+            "description": "Nutrición y reparación profunda para suavizar y revitalizar los labios manteniendo su forma natural."
+          },
+          {
+            "name": "Lifting Modeling Facial & Reducción de Papada",
+            "description": "Remodelación del óvalo facial sin cirugía combinada con enzimas (hialuronidasa, colagenasa y lipasa) para definir el contorno y tratar la zona de papada."
+          },
+          {
+            "name": "Ritual \"Glow\" Pre-Evento",
+            "badge": "Sin incapacidad",
+            "description": "Protocolo suave de renovación e hidratación inmediata para lucir una piel radiante el mismo día."
+          },
+          {
+            "name": "Reducción de Papada con Enzimas",
+            "description": "Protocolo focalizado con cóctel enzimático (hialuronidasa, colagenasa y lipasa) para disminuir grasa localizada, mejorar la firmeza y definir el perfil submentoniano."
+          },
+          {
+            "name": "Tensamax con Lifting",
+            "description": "Tratamiento tensor y reafirmante enfocado en estimular colágeno, mejorar la firmeza y lograr un efecto lifting progresivo y natural en el rostro y contorno."
+          }
+        ]
+      },
+      {
+        "title": "IV. Salud & Revitalización Capilar",
+        "items": [
+          {
+            "name": "Plasma Capilar (P.R.P.)",
+            "description": "Bioestimulación capilar enfocada en nutrir el folículo, fortalecer la raíz y estimular la vitalidad y densidad del cabello."
+          },
+          {
+            "name": "Mesoterapia Capilar",
+            "description": "Aplicación localizada de activos revitalizantes, vitaminas y oligoelementos según valoración y necesidad del cuero cabelludo."
+          },
+          {
+            "name": "Aparatología Capilar",
+            "description": "Tecnología aplicada al cuero cabelludo para estimular la microcirculación, oxigenar el folículo y potenciar la absorción de activos según valoración."
+          },
+          {
+            "name": "Masaje Capilar Revitalizante",
+            "description": "Maniobras manuales enfocadas en liberar tensión en el cuero cabelludo, activar la circulación y favorecer el bienestar folicular."
+          },
+          {
+            "name": "Tratamientos Capilares de Cuidado en Casa",
+            "description": "Protocolo personalizado de productos y pautas domiciliarias para mantener, prolongar y potenciar los resultados entre sesiones."
+          }
+        ]
+      }
+    ],
+    "modalNote": "Todos nuestros protocolos se extienden a cuello y escote bajo valoración. La elección del tratamiento y el plan de sesiones se definen en consulta personalizada según tu diagnóstico, objetivos y condiciones médicas.",
+    "modalHelper": {
+      "title": "¿No sabes cuál elegir?",
+      "text": "Cada piel y cada momento son distintos. Agenda una valoración o escríbenos para recomendarte el protocolo ideal para ti."
+    }
   },
   {
-    "id": "rejuvenecimiento-lifting-holistico",
-    "category": "Facial Holístico",
-    "name": "Lifting Facial Holístico & Radiofrecuencia",
-    "shortDescription": "Estimulación de colágeno mediante radiofrecuencia focalizada, drenaje escultórico facial y activos reafirmantes.",
-    "fullDescription": "Combina tecnología estética avanzada con maniobras manuales de remodelación facial y puntos de digito-puntura. Atenúa líneas de expresión, redefine el óvalo facial y relaja la tensión mandibular.",
-    "duration": "90 min",
-    "price": "$160.000 COP",
-    "image": "/images/facial-lifting.webp",
-    "imageWidth": 640,
-    "imageHeight": 480,
-    "popular": false,
-    "benefits": [
-      "Estimula colágeno y elastina endógena",
-      "Firmeza y tonicidad dérmica visible",
-      "Liberación de tensiones en rostro y cuello",
-      "Efecto tensor luminoso no invasivo"
-    ]
-  },
-  {
-    "id": "moldeo-corporal-drenaje",
-    "category": "Corporal Consciente",
-    "name": "Moldeo Corporal & Drenaje Linfático 360°",
-    "shortDescription": "Técnica combinada de cavitación, maderoterapia suave y drenaje linfático manual para desintoxicar y reducir medidas.",
-    "fullDescription": "Tratamiento enfocado en movilizar líquidos retenidos, mejorar la circulación sanguínea y modelar el contorno corporal sin dolor ni agresividad tisular, respetando el ritmo biológico de tu organismo.",
-    "duration": "80 min",
-    "price": "$140.000 COP",
+    "id": "corporal-aparatologia",
+    "category": "Servicios 1",
+    "name": "Corporal & Aparatología",
+    "shortDescription": "Drenaje linfático manual, maniobras quiroprácticas e hipopresivos para desinflamar, estilizar y potenciar tus resultados.",
     "image": "/images/body-care.webp",
     "imageWidth": 640,
     "imageHeight": 480,
     "popular": true,
     "benefits": [
-      "Disminución de hinchazón y retención de líquidos",
-      "Alivio de pesadez y reactivación circulatoria",
-      "Moldeo de zonas específicas sin hematomas",
-      "Protocolo relajante y no invasivo"
-    ]
+      {
+        "title": "Valoración y diagnóstico real",
+        "text": "Fórmulas homeopáticas, evaluamos tu composición corporal, tejidos, circulación y objetivos antes de definir o ajustar cada protocolo."
+      },
+      {
+        "title": "Ciencia, tecnología y soporte biológico",
+        "text": "Integramos aparatología especializada, activos seleccionados y terapias de apoyo metabólico o regenerativo para trabajar tanto el contorno como el equilibrio interno."
+      },
+      {
+        "title": "Progreso sostenible y natural",
+        "text": "Buscamos cambios visibles en firmeza, silueta y vitalidad con seguimiento y hábitos reales, evitando atajos extremos o efecto rebote."
+      }
+    ],
+    "modalTitle": "Menú de Tratamientos Corporales",
+    "modalSections": [
+      {
+        "title": "I. Aparatología & Moldeo Corporal",
+        "subtitle": "Tecnología focalizada para trabajar grasa localizada, textura, flacidez y circulación.",
+        "items": [
+          {
+            "name": "Radiofrecuencia Corporal",
+            "description": "Aplicación de energía térmica enfocada en estimular el colágeno, mejorar la firmeza y tratar la flacidez en distintas zonas del cuerpo."
+          },
+          {
+            "name": "Ultracavitación",
+            "description": "Tratamiento con ultrasonido orientado a apoyar el moldeamiento y la reducción de grasa localizada."
+          },
+          {
+            "name": "Termolipólisis",
+            "description": "Aplicación térmica enfocada en estimular el metabolismo local, favorecer la eliminación de toxinas y relajar la musculatura."
+          },
+          {
+            "name": "Tensamax Corporal",
+            "badge": "Reafirmación avanzada",
+            "description": "Tecnología enfocada en combatir la flacidez, estimular la producción de colágeno y tensar la piel en zonas como abdomen, brazos, entrepierna o glúteos."
+          },
+          {
+            "name": "Presoterapia",
+            "description": "Terapia de compresión secuencial para estimular el retorno venoso y linfático, aliviar piernas cansadas y reducir retención de líquidos."
+          },
+          {
+            "name": "Láser o Crioterapia Corporal + Mesoterapia",
+            "description": "Combinación de tecnología lumínica o frío localizado con activos mesoterápicos según objetivo corporal."
+          },
+          {
+            "name": "Plasma Corporal",
+            "description": "Tratamiento orientado a la reafirmación y tonificación cutánea en zonas corporales seleccionadas."
+          },
+          {
+            "name": "Hidrolipoclasia",
+            "description": "Procedimiento corporal enfocado en el abordaje de grasa localizada y el moldeamiento de contorno según valoración y zona a tratar."
+          },
+          {
+            "name": "Oxigenoterapia y Carboxiterapia Corporal",
+            "description": "Terapias enfocadas en mejorar la oxigenación tisular, la microcirculación y la calidad de la piel."
+          },
+          {
+            "name": "Protocolos Múltiples de Aparatología",
+            "description": "Combinación sinérgica de equipos y técnicas adaptadas a las necesidades de cada zona."
+          }
+        ]
+      },
+      {
+        "title": "II. Glúteos, Senos, Percutor, Kinesiotaping & Postoperatorios",
+        "items": [
+          {
+            "name": "Reafirmación & Tonificación de Senos",
+            "description": "Protocolo progresivo para mejorar firmeza y calidad de piel en senos y escote. Masaje, aparatología, activos faciales, P.R.P., ozonoterapia y vitamina C según valoración."
+          },
+          {
+            "name": "Proyección de Glúteos",
+            "description": "Planes de sesiones enfocadas en el levantamiento, tono y firmeza de glúteos."
+          },
+          {
+            "name": "Percutor",
+            "description": "Aplicación de percusión focalizada orientada a liberar tensión muscular, apoyar la descarga o acompañar procesos de recuperación."
+          },
+          {
+            "name": "Kinesiotaping",
+            "description": "Aplicación en zona específica (piernas, abdomen, glúteos o brazos)."
+          },
+          {
+            "name": "Postoperatorios",
+            "description": "Programa de sesiones para el acompañamiento y recuperación postoperatoria."
+          }
+        ]
+      },
+      {
+        "title": "III. Medicina Biológica, Detox & Control Metabólico",
+        "subtitle": "Apoyo integral desde el interior para vitalidad, inmunidad, equilibrio y composición corporal.",
+        "items": [
+          {
+            "name": "Sueroterapia Revitalizante",
+            "description": "Infusión de nutrientes y activos seleccionados para apoyar la energía, hidratación celular y recuperación general, disponible de forma individual o en ciclos."
+          },
+          {
+            "name": "Terapia de Autosanguis",
+            "badge": "Inmunomodulación & detox",
+            "description": "Terapia biológica personalizada que emplea una micro-muestra propia combinada con activos biorreguladores para estimular las defensas naturales, apoyar procesos de depuración profunda y equilibrar el organismo."
+          },
+          {
+            "name": "Auriculoterapia",
+            "description": "Estimulación en puntos del pabellón auricular como apoyo al equilibrio del sistema nervioso, ansiedad, apetito y bienestar general, acompañada de perfil de alimentación."
+          },
+          {
+            "name": "Limpieza Digestiva (Kit en Casa)",
+            "description": "Programa guiado orientado al bienestar digestivo y depuración integral (colon, estómago, hígado y apoyo frente a cargas ambientales), con perfil de alimentación."
+          }
+        ]
+      }
+    ],
+    "modalNote": "La elección del tratamiento, las zonas de aplicación y el plan de sesiones se definen en consulta personalizada según tu diagnóstico, objetivos y condiciones médicas."
   },
   {
-    "id": "masaje-relajante-piedras-calientes",
-    "category": "Bienestar & Energía",
-    "name": "Terapia Holística con Piedras Volcánicas",
-    "shortDescription": "Ritual de sanación corporal que fusiona masaje descontracturante, piedras de basalto tibias y aceites esenciales puros.",
-    "fullDescription": "Una inmersión sensorial diseñada para apagar el ruido mental y disolver nudos de tensión muscular. El calor de las piedras volcánicas equilibra los centros energéticos mientras los aceites botánicos nutren la piel.",
-    "duration": "75 min",
-    "price": "$135.000 COP",
+    "id": "bienestar-relajacion",
+    "category": "Servicios 1",
+    "name": "Bienestar & Relajación",
+    "shortDescription": "Masajes y desconexión sensorial para soltar tensiones, equilibrar tu energía y habitar tu cuerpo.",
     "image": "/images/hot-stones.webp",
     "imageWidth": 640,
     "imageHeight": 480,
     "popular": true,
     "benefits": [
-      "Alivio profundo del estrés y fatiga física",
-      "Liberación de sobrecarga en espalda y hombros",
-      "Armonización de la energía corporal",
-      "Mejora comprobada en la calidad del sueño"
-    ]
+      {
+        "title": "Presencia y escucha corporal",
+        "text": "Cada sesión parte de cómo llega tu cuerpo y tu nivel de carga física o mental en el día, ajustando el ritmo y la intensidad."
+      },
+      {
+        "title": "Desconexión real",
+        "text": "Creamos un entorno sereno que invita a bajar el ritmo, soltar el estrés acumulado y reconectar con tus sensaciones."
+      },
+      {
+        "title": "Alivio y equilibrio",
+        "text": "Buscamos que salgas con mayor ligereza, descanso y bienestar integral, respetando los límites de tu cuerpo."
+      }
+    ],
+    "modalTitle": "Menú de Bienestar & Relajación",
+    "modalSections": [
+      {
+        "title": "I. Masajes Relajantes",
+        "items": [
+          {
+            "name": "Relajante Espalda (30 min)",
+            "description": "Sesión focalizada en espalda para liberar tensión acumulada, bajar el ritmo y descansar."
+          },
+          {
+            "name": "Masaje Relajante Cuerpo Completo (60 min)",
+            "description": "Trabajo corporal integral orientado a relajar el sistema nervioso, soltar rigidez y devolver calma."
+          }
+        ]
+      },
+      {
+        "title": "II. Masajes de Especialidad",
+        "items": [
+          {
+            "name": "Drenaje Linfático Manual — Técnica Leduc",
+            "description": "Maniobras suaves y precisas enfocadas en estimular el drenaje linfático y disminuir la sensación de pesadez o retención."
+          },
+          {
+            "name": "Drenaje Linfático — Técnica Brasileña",
+            "description": "Técnica manual de ritmo dinámico orientada a favorecer el drenaje, reducir inflamación y estilizar la silueta."
+          },
+          {
+            "name": "Drenaje Linfático Manual — Técnica Vodder",
+            "description": "Método clásico y delicado para activar la circulación linfática y promover el equilibrio de líquidos."
+          },
+          {
+            "name": "Abdomarking / Marcación Abdominal (Masaje Quiropráctico)",
+            "description": "Maniobras manuales especializadas enfocadas en definición y contorno abdominal con enfoque quiropráctico."
+          },
+          {
+            "name": "Cierre de Costillas (Masaje Quiropráctico)",
+            "description": "Trabajo manual quiropráctico orientado a armonizar y favorecer el cierre costal."
+          },
+          {
+            "name": "Masaje Holístico",
+            "description": "Abordaje corporal integral que busca equilibrar el cuerpo, la respiración y el estado de relajación general."
+          },
+          {
+            "name": "Masaje con Ventosas",
+            "description": "Aplicación de ventosas para estimular la circulación local, liberar tensiones profundas y aliviar sobrecargas."
+          },
+          {
+            "name": "Metaloterapia",
+            "description": "Trabajo corporal con instrumentos metálicos diseñados para moldear, estimular la circulación y apoyar el manejo de tensión o tejido."
+          }
+        ]
+      },
+      {
+        "title": "III. Masaje con Piedras Calientes",
+        "items": [
+          {
+            "name": "Masaje Espalda con Piedras Volcánicas",
+            "description": "Aplicación de calor con piedras volcánicas en la espalda para relajar la musculatura y disipar tensiones."
+          },
+          {
+            "name": "Masaje con Piedras Calientes Cuerpo Completo (60 min)",
+            "description": "Ritual corporal con piedras volcánicas para una relajación profunda y sensación de calor envolvente."
+          }
+        ]
+      },
+      {
+        "title": "IV. Terapias Orientales & Calor Terapéutico",
+        "items": [
+          {
+            "name": "Masaje Chino — Técnica Chi-Nei-Sang",
+            "description": "Trabajo manual tradicional enfocado en el abdomen y el centro energético para liberar tensiones y favorecer el equilibrio interno."
+          },
+          {
+            "name": "Masaje Tailandés — Descarga de Tendones",
+            "description": "Técnica orientada a liberar tensión en tendones y tejidos profundos, mejorando la sensación de movilidad y alivio."
+          },
+          {
+            "name": "Moxibustión",
+            "description": "Aplicación de calor terapéutico en puntos específicos para estimular la circulación, aliviar tensiones y promover el equilibrio energético y el bienestar general."
+          }
+        ]
+      },
+      {
+        "title": "V. Rituales Sensoriales & Descarga Focalizada",
+        "items": [
+          {
+            "name": "Masaje Craneofacial & Cervical",
+            "description": "Trabajo manual delicado enfocado en cuero cabelludo, rostro, cuello y hombros para disipar el estrés mental y la tensión acumulada."
+          },
+          {
+            "name": "Reflexología Podal",
+            "description": "Estimulación de puntos reflejos en los pies orientada a inducir descanso profundo, aliviar pesadez y equilibrar el organismo."
+          },
+          {
+            "name": "Ritual de Aromaterapia Sensorial",
+            "description": "Sesión envolvente acompañada de aceites esenciales seleccionados según tu estado físico y emocional para profundizar la desconexión."
+          }
+        ]
+      }
+    ],
+    "modalNote": "La elección del tratamiento, las técnicas a integrar y el plan de sesiones se definen en consulta personalizada según tu diagnóstico, objetivos y condiciones médicas."
   },
   {
-    "id": "ritual-pausa-holistica-integral",
-    "category": "Experiencia Signature",
-    "name": "Ritual P.A.S 'Pausa Holística Integral'",
-    "shortDescription": "Nuestra experiencia insignia de desconexión total: facial oxigenante, masaje corporal relajante y armonización de chacras.",
-    "fullDescription": "Creado para quienes buscan una pausa transformadora en su semana. Iniciamos con exfoliación botánica suave, continuamos con masaje craneofacial y corporal con cuarzos y terminamos con un té herbal aromático.",
-    "duration": "120 min",
-    "price": "$220.000 COP",
-    "image": "/images/holistic-massage.webp",
+    "id": "peso-ideal-habitos",
+    "category": "Servicios 2",
+    "name": "Peso Ideal & Hábitos Conscientes",
+    "shortDescription": "Acompañamiento respetuoso hacia tu peso ideal —incluyendo obesidad— integrando buenos hábitos, alimentación consciente, homeopatía y suplementos.",
+    "image": "/images/facial-lifting.webp",
     "imageWidth": 640,
     "imageHeight": 480,
     "popular": true,
     "benefits": [
-      "Experiencia completa de 2 horas de desconexión",
-      "Cuidado integral de rostro, cuerpo y mente",
-      "Acompañamiento individual sin prisas",
-      "Regalo perfecto para ti o un ser querido"
-    ]
+      {
+        "title": "Acompañamiento sin juicios ni presiones",
+        "text": "Respetamos tu historia, tu ritmo y tu punto de partida, construyendo cambios reales sin culpa ni restricciones extremas."
+      },
+      {
+        "title": "Personalización real",
+        "text": "Ajustamos las pautas alimentarias según tu edad, peso, estatura y estilo de vida, apoyando el cuerpo con homeopatía y suplementación seleccionada."
+      },
+      {
+        "title": "Constancia que se queda contigo",
+        "text": "Buscamos que aprendas a escuchar tus señales y sostener tus avances en el día a día, reduciendo la frustración y el efecto rebote."
+      }
+    ],
+    "modalTitle": "Peso Ideal & Hábitos Conscientes",
+    "modalHighlight": {
+      "title": "Programa Activador Metabólico Integral",
+      "text": "Protocolo para sobrepeso u obesidad orientado a una reducción progresiva de peso, grasa y medidas —con casos reportados de hasta 16 kg en 2 meses con adherencia y seguimiento—, enfocado en resultados sostenibles sin efecto rebote y apoyo metabólico (los resultados varían según cada organismo y hábitos). Incluye 4 controles de peso y medidas, auriculoterapia y perfil de alimentación; se potencia con 4 sueroterapias y 4 drenajes linfáticos para acompañar el proceso."
+    },
+    "modalSections": [
+      {
+        "title": "I. Alimentación Consciente & Perfiles Personalizados",
+        "items": [
+          {
+            "name": "Perfiles de Nutrición Individualizados",
+            "description": "Guías alimentarias ajustadas según edad, peso, estatura y objetivos."
+          },
+          {
+            "name": "Educación en Hábitos Conscientes",
+            "description": "Acompañamiento práctico para mejorar la relación con la comida y sostener cambios en el tiempo."
+          },
+          {
+            "name": "Controles de Evolución & Medidas",
+            "description": "Seguimiento periódico para evaluar avances y ajustar el plan."
+          }
+        ]
+      },
+      {
+        "title": "II. Soporte Homeopático & Suplementación",
+        "items": [
+          {
+            "name": "Homeopatía de Acompañamiento",
+            "description": "Apoyo individualizado para el equilibrio general, saciedad y manejo de ansiedad según valoración."
+          },
+          {
+            "name": "Suplementación Orientada",
+            "description": "Selección de suplementos nutricionales o metabólicos según tus necesidades."
+          }
+        ]
+      }
+    ],
+    "modalNote": "La elección del protocolo, el plan de seguimiento y las recomendaciones se definen en consulta personalizada según tu diagnóstico, objetivos y condiciones médicas."
   },
   {
-    "id": "exfoliacion-hidratacion-botanica",
-    "category": "Corporal Consciente",
-    "name": "Exfoliación & Manto Hidratante Botánico",
-    "shortDescription": "Renovación celular profunda con sales marinas, arcillas orgánicas y envoltura emoliente en cabina temperada.",
-    "fullDescription": "Devuelve a la piel del cuerpo su sedosidad, elasticidad y tersura natural. Retira células queratinizadas acumuladas y prepara la dermis para una hidratación profunda de larga duración.",
-    "duration": "60 min",
-    "price": "$110.000 COP",
+    "id": "cursos-autocuidado",
+    "category": "Servicios 2",
+    "name": "Cursos (Autocuidado e Hipopresivos)",
+    "shortDescription": "Aprende técnicas prácticas para cuidar tu cuerpo, fortalecer tu faja abdominal y sostener tu bienestar en casa.",
+    "image": "/images/holistic-massage.webp",
+    "imageWidth": 640,
+    "imageHeight": 480,
+    "popular": false,
+    "benefits": [
+      {
+        "title": "Conocimiento práctico para tu día a día",
+        "text": "Te enseñamos técnicas claras, seguras y fáciles de aplicar en casa para prolongar tus resultados y conectar con tu cuerpo."
+      },
+      {
+        "title": "Guiado por criterio clínico y estético",
+        "text": "Cada clase, taller o experiencia parte de una mirada integral, respetando la anatomía, la postura y las necesidades reales de cada participante."
+      },
+      {
+        "title": "Experiencias memorables y a la medida",
+        "text": "Transformamos el autocuidado en un espacio cercano, elegante y significativo, tanto de forma individual como en grupo."
+      }
+    ],
+    "modalTitle": "Líneas de Aprendizaje & Experiencias",
+    "modalSections": [
+      {
+        "title": "I. Clases & Talleres de Autocuidado (Modalidad Presencial & Online)",
+        "items": [
+          {
+            "name": "Clases Online de Gimnasia Abdominal Hipopresiva",
+            "description": "Entrenamiento postural y respiratorio enfocado en fortalecer la faja abdominal profunda, cuidar el suelo pélvico, mejorar la postura y acompañar la recuperación corporal desde casa."
+          },
+          {
+            "name": "Clase Online de Autodrenaje & Activación de Desagües Linfáticos",
+            "description": "Aprende a estimular de forma segura los principales puntos de drenaje del cuerpo y realizar maniobras suaves en casa para favorecer la circulación linfática, aliviar la sensación de pesadez y apoyar la eliminación de líquidos."
+          },
+          {
+            "name": "Talleres de Autocuidado Facial & Corporal",
+            "description": "Espacios prácticos donde aprendes a reconocer tu tipo de piel, aplicar correctamente tus productos en casa y realizar rutinas efectivas de cuidado diario."
+          },
+          {
+            "name": "Técnicas de Automasaje según Necesidad",
+            "description": "Aprende maniobras seguras de drenaje suave, liberación de tensión o estimulación facial y corporal adaptadas a lo que tu cuerpo necesita."
+          },
+          {
+            "name": "Taller / Clase Online de Yoga Facial & Gimnasia Facial Consciente",
+            "description": "Ejercicios suaves de tonificación, liberación de tensión mandibular y postura cervical para acompañar la firmeza y vitalidad del rostro en casa."
+          }
+        ]
+      },
+      {
+        "title": "II. Experiencias Privadas & Celebraciones (Servicio a Domicilio o en Clínica)",
+        "items": [
+          {
+            "name": "Encuentros de Autocuidado para Despedidas de Soltera & Cumpleaños",
+            "description": "Una experiencia diferente, elegante y relajante para celebrar en grupo con rituales de cuidado facial, técnicas de bienestar y espacios guiados pensados para consentir a la homenajeada y sus invitadas."
+          },
+          {
+            "name": "Sesiones Grupales Personalizadas",
+            "description": "Programación a la medida para grupos de amigas, familia o fechas especiales que buscan compartir un momento de conexión y bienestar."
+          }
+        ]
+      },
+      {
+        "title": "III. Charlas & Bienestar Corporativo (Empresas, Grupos & Eventos)",
+        "items": [
+          {
+            "name": "Charlas & Talleres de Alimentación Consciente y Hábitos",
+            "description": "Espacios educativos y prácticos sobre energía en la jornada laboral, hábitos sostenibles y autocuidado diario, adaptados a equipos de trabajo en Bogotá o encuentros especiales."
+          },
+          {
+            "name": "Talleres de Manejo del Estrés, Postura & Pausas Conscientes",
+            "description": "Sesiones dinámicas enfocadas en respiración, liberación de tensión y ergonomía básica para mejorar el bienestar durante la jornada laboral."
+          },
+          {
+            "name": "Activaciones & Experiencias de Marca",
+            "description": "Participación en eventos corporativos o jornadas de bienestar con dinámicas prácticas y cercanas que aportan valor real a los asistentes."
+          }
+        ]
+      }
+    ],
+    "modalNote": "La modalidad, duración, temática y enfoque de cada clase, taller o experiencia grupal se diseñan de forma personalizada según tus objetivos, nivel y necesidades del grupo."
+  },
+  {
+    "id": "circulos-holisticos",
+    "category": "Servicios 2",
+    "name": "Círculos Holísticos",
+    "shortDescription": "Espacios de encuentro, escucha y transformación consciente para mujeres y hombres.",
     "image": "/images/aromatherapy.webp",
     "imageWidth": 640,
     "imageHeight": 480,
     "popular": false,
     "benefits": [
-      "Piel suave y luminosa como seda",
-      "Eliminación de impurezas y asperezas",
-      "Absorción óptima de nutrientes y aceites",
-      "Ambiente cálido de relajación absoluta"
-    ]
+      {
+        "title": "Un espacio seguro y confidencial",
+        "text": "Creamos entornos cálidos y respetuosos donde cada persona puede expresarse sin juicios y ser escuchada con presencia."
+      },
+      {
+        "title": "Mirada integral y humana",
+        "text": "Conectamos el cuidado del cuerpo, las emociones, los hábitos y los procesos vitales desde una perspectiva cercana y consciente."
+      },
+      {
+        "title": "Encuentros con sentido",
+        "text": "Transformamos las reuniones personales, celebraciones o espacios de equipo en momentos reales de pausa, conexión y claridad."
+      }
+    ],
+    "modalTitle": "Modalidades de Encuentro — Círculos Holísticos",
+    "modalSections": [
+      {
+        "title": "I. Círculos Personales (Mujeres, Hombres & Mixtos)",
+        "items": [
+          {
+            "name": "Encuentros de Escucha & Transformación Consciente",
+            "description": "Espacios íntimos y guiados para reflexionar sobre la relación con el cuerpo, el autocuidado, los límites, los hábitos y las distintas etapas de cambio en la vida cotidiana."
+          },
+          {
+            "name": "Círculos Temáticos por Convocatoria",
+            "description": "Grupos pequeños programados periódicamente en Bogotá en torno a temas de bienestar interior, manejo de la exigencia, calma y vida consciente."
+          }
+        ]
+      },
+      {
+        "title": "II. Círculos de Cumpleaños & Celebraciones con Sentido",
+        "items": [
+          {
+            "name": "Celebrar un Nuevo Ciclo desde el Bienestar",
+            "description": "Una alternativa íntima y significativa para festejar un cumpleaños o una fecha especial con amigas, amigos o familia, compartiendo gratitud, intenciones y conversación cercana."
+          },
+          {
+            "name": "Encuentros Privados a la Medida",
+            "description": "Diseñados según la energía del grupo y lo que la persona homenajeada desea vivir en su celebración."
+          }
+        ]
+      },
+      {
+        "title": "III. Círculos Empresariales & de Equipos",
+        "items": [
+          {
+            "name": "Espacios de Pausa & Conexión Humana",
+            "description": "Encuentros guiados para equipos de trabajo en Bogotá orientados a bajar el ritmo, fortalecer la confianza, mejorar la escucha y acompañar cierres o inicios de ciclo laboral."
+          },
+          {
+            "name": "Dinámicas de Bienestar Integral para Organizaciones",
+            "description": "Formatos adaptados a las necesidades de cada equipo, priorizando el respeto, la comunicación y el bienestar emocional en el entorno de trabajo."
+          }
+        ]
+      }
+    ],
+    "modalNote": "La temática, dinámica, duración y formato de cada círculo —personal, de cumpleaños o empresarial— se acuerdan previamente según el propósito del encuentro y las características del grupo, manteniendo siempre un espacio respetuoso y confidencial."
   }
 ]
