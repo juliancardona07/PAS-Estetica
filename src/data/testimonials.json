@@ -1,35 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Valentina Gómez",
-    "role": "Paciente Facial & Bienestar",
+    "number": "01",
+    "title": "Pausa, calma y desconexión",
+    "name": "Marcela T.",
+    "role": "Paciente P.A.S",
     "rating": 5,
-    "comment": "Llegué a P.A.S con la piel sumamente reactiva por estrés laboral. Paula no solo me hizo una limpieza impecable y delicada, sino que su atención y la atmósfera del lugar me devolvieron la calma. Es un verdadero refugio.",
-    "treatment": "Limpieza Facial Profunda"
+    "comment": "Llegué con el cuerpo tenso, la cabeza a mil y cero tiempo para mí. Me desconecté desde que empieza la sesión, el tiempo se detiene. Salí con la piel viva, los hombros sueltos y una paz que me duró días.",
+    "treatment": "Santuario de Pausa & Facial"
   },
   {
     "id": 2,
-    "name": "Carlos Mauricio Méndez",
-    "role": "Paciente Terapia de Masaje",
+    "number": "02",
+    "title": "Respaldo homeopático y cuidado desde adentro",
+    "name": "Andrea P.",
+    "role": "Paciente P.A.S",
     "rating": 5,
-    "comment": "Trabajo largas jornadas sentado y el dolor lumbar era constante. La terapia con piedras calientes y el enfoque holístico de Paula marcaron un antes y un después. La puntualidad y la privacidad de la cita son inigualables.",
-    "treatment": "Terapia con Piedras Volcánicas"
+    "comment": "Lo que más me sorprendió es que no tratan la piel o el cuerpo como algo aislado. Combinar el apoyo homeopático y natural con lo que se trabaja en cabina hizo un cambio real en mi energía, mi digestión y cómo se ve mi rostro.",
+    "treatment": "Enfoque Holístico & Homeopatía"
   },
   {
     "id": 3,
-    "name": "Marcela Rincón",
-    "role": "Paciente Ritual Signature",
+    "number": "03",
+    "title": "Técnicas manuales efectivas desde la primera sesión",
+    "name": "Carolina V.",
+    "role": "Paciente P.A.S",
     "rating": 5,
-    "comment": "El Ritual Pausa Holística es la mejor inversión que he hecho en mi bienestar este año. Sales flotando, con la piel renovada y la energía recargada. Cero prisas, atención 100% dedicada a ti.",
-    "treatment": "Ritual Pausa Holística Integral"
+    "comment": "Estaba cansada de lugares donde todo es a las carreras. Aquí las técnicas manuales son cuidadosas, gentiles y se sienten desde la primera sesión: salí con el cuerpo visiblemente más liviano, desinflamado y sin haber sufrido en el intento.",
+    "treatment": "Corporal Consciente & Técnicas Manuales"
   },
   {
     "id": 4,
-    "name": "Laura Sofía Torres",
-    "role": "Paciente Moldeo Corporal",
+    "number": "04",
+    "title": "Peso ideal y hábitos sin juicios",
+    "name": "Laura M.",
+    "role": "Paciente P.A.S",
     "rating": 5,
-    "comment": "Me encantó que no usan métodos dolorosos ni te dejan moretones. El drenaje y la aparatología son sumamente suaves y los resultados en desinflamación se notan desde la primera semana. 100% recomendado.",
-    "treatment": "Moldeo Corporal & Drenaje"
+    "comment": "Por años sentí culpa cada vez que intentaba cambiar mis hábitos o mi peso. Con Paula encontré un espacio sin juicios, con escucha real y un acompañamiento constante que me ayudó a habitar mi cuerpo con cariño y sostener mis cambios.",
+    "treatment": "Peso Ideal & Hábitos"
   }
 ]
-
